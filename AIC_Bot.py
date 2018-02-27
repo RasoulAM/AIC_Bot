@@ -10,7 +10,7 @@ from utilities.KeyBoards import *
 from utilities.Queries import *
 from dispatcher import *
 
-TOKEN = ""
+TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
 chat_ids = telepot.helper.SafeDict()
 
@@ -37,18 +37,11 @@ class StateHandler(telepot.helper.ChatHandler):
 
     def on_chat_message(self, msg):
         pprint(msg)
-        # if not self.exists:
-        #     self._starter()
-        # el
         if msg["text"] == "نظرسنجی" and self.state == 0:
             self.state = 1
         else:
-            self._dispatcher(msg)
-            self.sender.sendMessage(text="تا همینجاش بیشتر نزدم!")
-
-    @staticmethod
-    def map_loader(self, msg):
-        self.sender.sendMessage(text="Salam")
+            dispatcher._dispatcher(self, msg)
+            # self.sender.sendMessage(text="تا همینجاش بیشتر نزدم!")
 
     def _starter(self):
         self.sender.sendMessage(text="Hello", reply_markup=main_keyboard)
@@ -65,9 +58,6 @@ class StateHandler(telepot.helper.ChatHandler):
     def go_forward(self, i):
         self.state = self.state * 10 + i
 
-    def _dispatcher(self, msg):
-        if msg["text"] in dispatchers:
-            self.dispatchers[msg["text"]](self, msg)
 
 
 if __name__ == '__main__':
