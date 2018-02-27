@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="726132df-0c95-47fb-b045-4a639a9860b4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/AIC_Bot.iml" afterPath="$PROJECT_DIR$/.idea/AIC_Bot.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AIC_Bot.py" afterPath="$PROJECT_DIR$/AIC_Bot.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/Texts.py" afterPath="$PROJECT_DIR$/utilities/Texts.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/database.db" afterPath="$PROJECT_DIR$/utilities/database.db" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -294,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519671181732</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added gitignore">
+      <created>1519713339160</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519713339160</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -331,7 +334,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fodong" />
-    <option name="LAST_COMMIT_MESSAGE" value="fodong" />
+    <MESSAGE value="added gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
