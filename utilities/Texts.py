@@ -12,6 +12,14 @@ main_menu_texts = [
     "مسابقه عکس " + emojies.get('camera')
 ]
 
-location_texts = [
-    ""
+locations_buttons_texts = [
+        "تالارها"
+    ,
+        "سالن جابر"
+    ,
+        "مسجد"
+    ,
+        "غذاخوری"
+    ,
+        "بازگشت"
 ]
