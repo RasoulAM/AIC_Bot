@@ -3,9 +3,12 @@ import telepot
 import sqlite3
 from telepot.delegate import *
 from telepot.loop import MessageLoop
+
+import dispatcher
 from utilities.Emojies_table import *
 from utilities.KeyBoards import *
 from utilities.Queries import *
+from dispatcher import *
 
 TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
@@ -40,6 +43,7 @@ class StateHandler(telepot.helper.ChatHandler):
         if msg["text"] == "نظرسنجی" and self.state == 0:
             self.state = 1
         else:
+            self._dispatcher(msg)
             self.sender.sendMessage(text="تا همینجاش بیشتر نزدم!")
 
     @staticmethod
@@ -60,6 +64,10 @@ class StateHandler(telepot.helper.ChatHandler):
 
     def go_forward(self, i):
         self.state = self.state * 10 + i
+
+    def _dispatcher(self, msg):
+        if msg["text"] in dispatchers:
+            self.dispatchers[msg["text"]](self, msg)
 
 
 if __name__ == '__main__':
