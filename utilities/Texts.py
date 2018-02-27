@@ -1,8 +1,8 @@
 from utilities.Emojies_table import *
 import os
 
-db_path = os.getcwd() + '\\utilities' + '\database.db'
-db_path1 = os.getcwd() + '\database.db'
+db_path = os.getcwd() + '/utilities' + '/database.db'
+db_path1 = os.getcwd() + '/database.db'
 
 main_menu_texts = [
     "نقشه دانشگاه" + emojies.get('location'),

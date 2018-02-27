@@ -10,7 +10,7 @@ from utilities.KeyBoards import *
 from utilities.Queries import *
 from dispatcher import *
 
-TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
+TOKEN = ""
 
 chat_ids = telepot.helper.SafeDict()
 

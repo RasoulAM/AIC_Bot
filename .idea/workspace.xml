@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="726132df-0c95-47fb-b045-4a639a9860b4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AIC_Bot.py" afterPath="$PROJECT_DIR$/AIC_Bot.py" />
-      <change beforePath="$PROJECT_DIR$/dispatcher.py" afterPath="$PROJECT_DIR$/dispatcher.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/database.db" afterPath="$PROJECT_DIR$/utilities/database.db" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,21 +13,29 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AIC_Bot$DB.coverage" NAME="DB Coverage Results" MODIFIED="1519710927432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities" />
-    <SUITE FILE_PATH="coverage/AIC_Bot$AIC_Bot.coverage" NAME="AIC_Bot Coverage Results" MODIFIED="1519716899759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AIC_Bot$AIC_Bot.coverage" NAME="AIC_Bot Coverage Results" MODIFIED="1519711057482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AIC_Bot$DB.coverage" NAME="DB Coverage Results" MODIFIED="1519678334436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-186">
-              <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            <state relative-caret-position="144">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
-                <marker date="1519716899644" expanded="true" signature="1705:1723" ph="insert into states... " />
-                <marker date="1519716899644" expanded="true" signature="1705:1759" ph="insert into states... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -37,14 +43,12 @@
       <file leaf-file-name="Queries.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="180">
               <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
               <folding>
-                <marker date="1519677902772" expanded="true" signature="16:41" ph="insert into states... " />
-                <marker date="1519677902772" expanded="true" signature="16:42" ph="insert into states... " />
-                <marker date="1519677902772" expanded="true" signature="103:123" ph="select chat_... states" />
-                <marker date="1519677902772" expanded="true" signature="103:139" ph="select * fro... states" />
-                <marker date="1519677902772" expanded="true" signature="213:239" ph="update states... " />
+                <marker date="1519710931349" expanded="true" signature="16:42" ph="insert into states... " />
+                <marker date="1519710931349" expanded="true" signature="103:139" ph="select * fro... states" />
+                <marker date="1519710931349" expanded="true" signature="213:239" ph="update states... " />
               </folding>
             </state>
           </provider>
@@ -53,14 +57,11 @@
       <file leaf-file-name="DB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="108">
+              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1519676547138" expanded="true" signature="132:133" ph="create table... states" />
-                <marker date="1519676547138" expanded="true" signature="151:246" ph="create table... states" />
-                <marker date="1519676547138" expanded="true" signature="266:286" ph="select * fro... states" />
-                <marker date="1519676547138" expanded="true" signature="327:355" ph="delete from states... " />
+                <marker date="1519710931349" expanded="true" signature="327:355" ph="delete from states... " />
               </folding>
             </state>
           </provider>
@@ -69,8 +70,8 @@
       <file leaf-file-name="Lover.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lover.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="91" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="18" />
+            <state relative-caret-position="110">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -81,8 +82,8 @@
       <file leaf-file-name="dispatcher.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dispatcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -93,7 +94,7 @@
       <file leaf-file-name="KeyBoards.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="306">
               <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
               <folding>
                 <element signature="e#16#115#0" expanded="true" />
@@ -105,8 +106,8 @@
       <file leaf-file-name="Texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="72">
+              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -139,12 +140,13 @@
         <option value="$PROJECT_DIR$/utilities/Locations.py" />
         <option value="$PROJECT_DIR$/utilities/emojies_table.py" />
         <option value="$PROJECT_DIR$/utilities/dispatcher.py" />
+        <option value="$PROJECT_DIR$/dispatcher.py" />
         <option value="$PROJECT_DIR$/utilities/KeyBoards.py" />
         <option value="$PROJECT_DIR$/Lover.py" />
-        <option value="$PROJECT_DIR$/utilities/Texts.py" />
         <option value="$PROJECT_DIR$/utilities/DB.py" />
         <option value="$PROJECT_DIR$/utilities/Queries.py" />
-        <option value="$PROJECT_DIR$/dispatcher.py" />
+        <option value="$PROJECT_DIR$/utilities/Texts.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/AIC_Bot.py" />
       </list>
     </option>
@@ -176,6 +178,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -193,7 +196,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,19 +290,40 @@
       <option name="project" value="LOCAL" />
       <updated>1519671181732</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added gitignore">
+      <created>1519713339160</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519713339160</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added gitignore">
+      <created>1519713363833</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1519713363833</updated>
+    </task>
+    <task id="LOCAL-00004" summary="idea removed">
+      <created>1519713541903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519713541903</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="-7" y="1" width="1303" height="780" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5085929" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.4914071" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281493" sideWeight="0.4914071" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13104188" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17529881" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -324,22 +347,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fodong" />
-    <option name="LAST_COMMIT_MESSAGE" value="fodong" />
+    <MESSAGE value="added gitignore" />
+    <MESSAGE value="idea removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIC_Bot.py</url>
-          <line>29</line>
+          <line>26</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/AIC_Bot.py</url>
-          <line>19</line>
+          <line>16</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -354,43 +379,36 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1519716899644" expanded="true" signature="1705:1723" ph="insert into states... " />
-            <marker date="1519716899644" expanded="true" signature="1705:1759" ph="insert into states... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="180">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding>
-            <marker date="1519677902772" expanded="true" signature="16:41" ph="insert into states... " />
-            <marker date="1519677902772" expanded="true" signature="16:42" ph="insert into states... " />
-            <marker date="1519677902772" expanded="true" signature="103:123" ph="select chat_... states" />
-            <marker date="1519677902772" expanded="true" signature="103:139" ph="select * fro... states" />
-            <marker date="1519677902772" expanded="true" signature="213:239" ph="update states... " />
+            <marker date="1519710931349" expanded="true" signature="16:42" ph="insert into states... " />
+            <marker date="1519710931349" expanded="true" signature="103:139" ph="select * fro... states" />
+            <marker date="1519710931349" expanded="true" signature="213:239" ph="update states... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/DB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="108">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1519676547138" expanded="true" signature="132:133" ph="create table... states" />
-            <marker date="1519676547138" expanded="true" signature="151:246" ph="create table... states" />
-            <marker date="1519676547138" expanded="true" signature="266:286" ph="select * fro... states" />
-            <marker date="1519676547138" expanded="true" signature="327:355" ph="delete from states... " />
+            <marker date="1519710931349" expanded="true" signature="327:355" ph="delete from states... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lover.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
+        <state relative-caret-position="1638">
           <caret line="91" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -400,27 +418,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-          <folding>
-            <element signature="e#16#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
+        <state relative-caret-position="72">
           <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -428,72 +436,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-            <marker date="1519716899644" expanded="true" signature="1705:1723" ph="insert into states... " />
-            <marker date="1519716899644" expanded="true" signature="1705:1759" ph="insert into states... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <marker date="1519677902772" expanded="true" signature="16:41" ph="insert into states... " />
-            <marker date="1519677902772" expanded="true" signature="16:42" ph="insert into states... " />
-            <marker date="1519677902772" expanded="true" signature="103:123" ph="select chat_... states" />
-            <marker date="1519677902772" expanded="true" signature="103:139" ph="select * fro... states" />
-            <marker date="1519677902772" expanded="true" signature="213:239" ph="update states... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1519676547138" expanded="true" signature="132:133" ph="create table... states" />
-            <marker date="1519676547138" expanded="true" signature="151:246" ph="create table... states" />
-            <marker date="1519676547138" expanded="true" signature="266:286" ph="select * fro... states" />
-            <marker date="1519676547138" expanded="true" signature="327:355" ph="delete from states... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lover.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="91" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="306">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
             <element signature="e#16#115#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -510,6 +458,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -539,8 +488,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1519716899644" expanded="true" signature="1705:1723" ph="insert into states... " />
-            <marker date="1519716899644" expanded="true" signature="1705:1759" ph="insert into states... " />
           </folding>
         </state>
       </provider>
@@ -567,6 +514,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -596,8 +544,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1519716899644" expanded="true" signature="1705:1723" ph="insert into states... " />
-            <marker date="1519716899644" expanded="true" signature="1705:1759" ph="insert into states... " />
           </folding>
         </state>
       </provider>
@@ -615,19 +561,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/namedtuple.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/namedtuple.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/aio/__init__.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/urllib3/connectionpool.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/helper.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/delegate.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/loop.py" />
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="286" column="0" lean-forward="false" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <marker date="1519710931349" expanded="true" signature="16:42" ph="insert into states... " />
+            <marker date="1519710931349" expanded="true" signature="103:139" ph="select * fro... states" />
+            <marker date="1519710931349" expanded="true" signature="213:239" ph="update states... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1519710931349" expanded="true" signature="327:355" ph="delete from states... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Lover.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dispatcher.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="306">
           <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
           <folding>
             <element signature="e#16#115#0" expanded="true" />
@@ -635,118 +625,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/aio/__init__.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="482" column="14" lean-forward="false" selection-start-line="482" selection-start-column="14" selection-end-line="482" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lover.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="91" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/urllib3/connectionpool.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/helper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="581" column="0" lean-forward="false" selection-start-line="581" selection-start-column="0" selection-end-line="581" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/delegate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/loop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/telepot/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="1382" column="0" lean-forward="false" selection-start-line="1382" selection-start-column="0" selection-end-line="1382" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        <state relative-caret-position="72">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1519676547138" expanded="true" signature="132:133" ph="create table... states" />
-            <marker date="1519676547138" expanded="true" signature="151:246" ph="create table... states" />
-            <marker date="1519676547138" expanded="true" signature="266:286" ph="select * fro... states" />
-            <marker date="1519676547138" expanded="true" signature="327:355" ph="delete from states... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <marker date="1519677902772" expanded="true" signature="16:41" ph="insert into states... " />
-            <marker date="1519677902772" expanded="true" signature="16:42" ph="insert into states... " />
-            <marker date="1519677902772" expanded="true" signature="103:123" ph="select chat_... states" />
-            <marker date="1519677902772" expanded="true" signature="103:139" ph="select * fro... states" />
-            <marker date="1519677902772" expanded="true" signature="213:239" ph="update states... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dispatcher.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state relative-caret-position="144">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-            <marker date="1519716899644" expanded="true" signature="1705:1723" ph="insert into states... " />
-            <marker date="1519716899644" expanded="true" signature="1705:1759" ph="insert into states... " />
           </folding>
         </state>
       </provider>
