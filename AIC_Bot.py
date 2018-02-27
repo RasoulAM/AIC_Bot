@@ -63,7 +63,7 @@ class StateHandler(telepot.helper.ChatHandler):
 if __name__ == '__main__':
     bot = telepot.DelegatorBot(TOKEN, {
         pave_event_space()(
-            per_chat_id(), create_open, StateHandler, timeout=15),
+            per_chat_id(), create_open, StateHandler, timeout=3600),
     })
 
     MessageLoop(bot).run_forever()

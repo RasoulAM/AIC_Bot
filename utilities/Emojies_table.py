@@ -4,5 +4,6 @@ emojies = {
     'location': u'\U0001f4cd',
     'calender': u'\U0001f4c5',
     'clipboard': u'\U0001f4cb',
-    'information': u'\U00012139'
+    'information': u'\U00012139',
+    'dining_hall': u'\U0001f372'
 }
