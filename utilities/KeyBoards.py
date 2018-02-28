@@ -1,5 +1,8 @@
 # coding: utf-8
-from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove, ForceReply
+
+
+from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
+
 from utilities.Texts import *
 
 
@@ -25,10 +28,7 @@ def _location_default_keyboard():
             loc_temp[0], loc_temp[1]
         ],
         [
-            loc_temp[2], loc_temp[3]
-        ],
-        [
-            loc_temp[4]
+            loc_temp[2]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)

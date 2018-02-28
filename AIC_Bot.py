@@ -1,14 +1,14 @@
-from pprint import *
-import telepot
 import sqlite3
+from pprint import *
+
+import telepot
 from telepot.delegate import *
 from telepot.loop import MessageLoop
 
 import dispatcher
-from utilities.Emojies_table import *
-from utilities.KeyBoards import *
-from utilities.Queries import *
 from dispatcher import *
+from utilities.Queries import *
+from utilities.Texts import db_path
 
 TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
@@ -20,28 +20,23 @@ class StateHandler(telepot.helper.ChatHandler):
         super(StateHandler, self).__init__(*args, **kwargs)
         self.connection = sqlite3.connect(db_path, check_same_thread=False)
         self.query = self.connection.cursor()
-        self.exists = False
-        self.state = 0
-        if not self._started():
-            self.state = 1
-            self._starter()
-            self.sender.sendMessage(text="Hi You!")
-
-    def _started(self):
-        a = self.query.execute(fetch_chat_id + str(self.chat_id)).fetchall()
+        id_in_database = self.query.execute(fetch_user + str(self.chat_id)).fetchall()
         self.connection.commit()
-        if a:
+        self.exists = False
+        if id_in_database:
+            self.state = State(id_in_database[0][1])
             self.exists = True
-            self.state = a[0][1]
-        return self.exists
+        if not self.exists:
+            self.state = State.MAIN
+            self._starter()
+            self.sender.sendMessage(text="First time user detected!!")
+        else:
+            self.state = State(id_in_database[0][1])
+        print("at the begin state: " + str(self.state.value))
 
     def on_chat_message(self, msg):
         pprint(msg)
-        if msg["text"] == "نظرسنجی" and self.state == 0:
-            self.state = 1
-        else:
-            dispatcher._dispatcher(self, msg)
-            # self.sender.sendMessage(text="تا همینجاش بیشتر نزدم!")
+        dispatcher.dispatch(self, msg)
 
     def _starter(self):
         self.sender.sendMessage(text="Hello", reply_markup=main_keyboard)
@@ -49,21 +44,18 @@ class StateHandler(telepot.helper.ChatHandler):
 
     def on_close(self, msg):
         if self.exists:
-            query = (update_state1 + str(self.state) + update_state2 + str(self.chat_id))
+            query = (update_state1 + str(self.state.value) + update_state2 + str(self.chat_id))
         else:
-            query = insert_state + str(self.chat_id) + "," + str(self.state) + ')'
+            query = insert_state + str(self.chat_id) + "," + str(self.state.value) + ')'
         self.query.execute(query)
         self.connection.commit()
-
-    def go_forward(self, i):
-        self.state = self.state * 10 + i
-
+        print("Timed out at state: " + str(self.state.value))
 
 
 if __name__ == '__main__':
     bot = telepot.DelegatorBot(TOKEN, {
         pave_event_space()(
-            per_chat_id(), create_open, StateHandler, timeout=3600),
+            per_chat_id(), create_open, StateHandler, timeout=15),
     })
 
     MessageLoop(bot).run_forever()

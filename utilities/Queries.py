@@ -1,7 +1,7 @@
 insert_state = "insert into states VALUES("
 
 
-fetch_chat_id = '' \
+fetch_user = '' \
                 """
                 select * from states WHERE chat_ids=
                 """
