@@ -36,7 +36,7 @@ class StateHandler(telepot.helper.ChatHandler):
     def on_chat_message(self, msg):
         pprint(msg)
 
-        ##By writing "state", the state will be shown
+        # By writing "state", the state will be shown
         if msg["text"] == "state":
             self.sender.sendMessage(text=str(self.state))
             return

@@ -23,3 +23,6 @@ class State(Enum):
     SCHEDULE_DAY1 = 121
     SCHEDULE_DAY2 = 122
 
+
+class Action(Enum):
+    RETURN = 1
