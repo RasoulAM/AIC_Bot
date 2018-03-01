@@ -15,3 +15,19 @@ update_state2 = '' \
                 """
                 where chat_ids = 
                 """
+
+messages_create_table = '' \
+               """
+               create table Messages(
+                    chat_id int,
+                    Message text,
+                    is_read int,
+                    is_answered int)
+               """
+
+
+send_message_text = '' \
+               """
+               insert into Messages
+               VALUES (
+               """

@@ -1,3 +1,6 @@
+from utilities.Emojies_table import emojies
+
+
 def get_location(msg_text):  # latitude, longitude
     jaber = "جابر"
     halls = "تالار"
@@ -19,6 +22,6 @@ def get_location(msg_text):  # latitude, longitude
 
 locations = {
     "سالن جابر": [35.70461974064782, 51.34968727827072],
-    "سالن": [35.703028440307705, 51.351864427319924]
+    "غذاخوری" + emojies.get('dining_hall'): [35.703028440307705, 51.351864427319924]
 }
 

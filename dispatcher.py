@@ -44,20 +44,14 @@ dispatchers = {
 
 
 def dispatch(delegate, msg):
-    if transitions.get((delegate.state, msg["text"])) is None:
-        delegate.sender.sendMessage(text=msg["text"])
+    if transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is None:
         return
-    new_state = transitions.get((delegate.state, msg["text"]))(delegate, msg)
+    elif transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is not None:
+        new_state = transitions.get((delegate.state, None))(delegate, msg)
+    else:
+        new_state = transitions.get((delegate.state, msg["text"]))(delegate, msg)
     if new_state:
         delegate.state = new_state
-
-    # new_state = _transition(delegate.state, msg["text"])
-    # if new_state:  # transition
-    #     delegate.state = new_state
-    #     if dispatchers[delegate.state]:
-    #         dispatchers[delegate.state](delegate, msg)
-    # else:
-    #     delegate.sender.sendMessage(text="Going to None state!!")
 
 
 transitions = {
@@ -71,11 +65,21 @@ transitions = {
     (State.MAIN, state_texts_mapping.get(State.INBOX)): inbox,
     (State.MAIN, state_texts_mapping.get(State.CONTACT_US)): contact_us,
 
+    # main transitions for admin
+    (State.MAIN, "abrakadabra"): admin_panel,
+
+    # admin panel transitions
+    (State.ADMIN_PANEL, action_texts_mapping.get(Action.RETURN)): main_menu,
+
+
     # Location transitions
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_JABER)): get_location,
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_CE_DP)): get_location,
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_LUNCH)): get_location,
     (State.LOCATION, action_texts_mapping.get(Action.RETURN)): main_menu,
+
+    (State.CONTACT_US, None): send_message_to_admin,
+    (State.CONTACT_US, action_texts_mapping.get(Action.RETURN)): main_menu,
 
     #
 
