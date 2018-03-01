@@ -31,3 +31,8 @@ send_message_text = '' \
                insert into Messages
                VALUES (
                """
+
+fetch_messages = '' \
+                 """
+                 select chat_id, Message from Messages where is_read = 0
+                 """

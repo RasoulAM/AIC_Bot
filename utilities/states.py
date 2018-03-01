@@ -4,6 +4,8 @@ from enum import Enum
 class State(Enum):
     MAIN = 1
     ADMIN_PANEL = 2
+    ANSWER_MESSAGES = 3
+    ANSWERING = 4
 
     # main menu
     LOCATION = 101

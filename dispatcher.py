@@ -70,6 +70,7 @@ transitions = {
 
     # admin panel transitions
     (State.ADMIN_PANEL, action_texts_mapping.get(Action.RETURN)): main_menu,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_MESSAGES)): answer_messages,
 
 
     # Location transitions

@@ -56,4 +56,16 @@ def get_location(delegate, msg):
 
 
 def admin_panel(delegate, msg):
+    delegate.sender.sendMessage(text="Welcome to the admin panel!", reply_markup=admin_panel_keyboard)
     return State.ADMIN_PANEL
+
+
+def answer_messages(delegate, msg):
+    messages = delegate.query.execute(fetch_messages).fetchall()
+    delegate.connection.commit()
+    if messages is None:
+        delegate.sender.sendMessage(text="No unread messages!")
+        return State.ADMIN_PANEL
+    answering_message = messages[0]
+    return State.ANSWERING
+

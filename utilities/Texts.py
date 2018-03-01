@@ -24,5 +24,10 @@ locations_buttons_texts = [
     "بازگشت",
 ]
 
+admin_panel_buttons_texts = [
+    "خواندن پیامها",
+    "بازگشت",
+]
+
 
 

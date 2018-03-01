@@ -33,6 +33,7 @@ def _location_default_keyboard():
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
 
+
 def _contact_us_keyboard():
     btn_lst = [
         [
@@ -42,10 +43,16 @@ def _contact_us_keyboard():
     return ReplyKeyboardMarkup(keyboard=btn_lst)
 
 
+def _admin_panel_keyboard():
+    btn_lst = [
+        [
+            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1]
+        ]
+    ]
+    return ReplyKeyboardMarkup(keyboard=btn_lst)
+
+
 main_keyboard = _main_keyboard()
 location_keyboard = _location_default_keyboard()
 contact_us_keyboard = _contact_us_keyboard()
-
-
-
-
+admin_panel_keyboard = _admin_panel_keyboard()
