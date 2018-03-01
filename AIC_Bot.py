@@ -22,34 +22,35 @@ class StateHandler(telepot.helper.ChatHandler):
         self.query = self.connection.cursor()
         id_in_database = self.query.execute(fetch_user + str(self.chat_id)).fetchall()
         self.connection.commit()
-        self.exists = False
+        self.existed_before = False
         if id_in_database:
             self.state = State(id_in_database[0][1])
-            self.exists = True
-        if not self.exists:
+            self.existed_before = True
+        if not self.existed_before:
             self.state = State.MAIN
-            self._starter()
-            self.sender.sendMessage(text="First time user detected!!")
+            self.sender.sendMessage(text="First time user detected!!", reply_markup=main_keyboard)
         else:
             self.state = State(id_in_database[0][1])
-        print("at the begin state: " + str(self.state.value))
+        print("Initialization of connection finished. State: " + str(self.state.value))
 
     def on_chat_message(self, msg):
         pprint(msg)
+
+        ##By writing "state", the state will be shown
+        if msg["text"] == "state":
+            self.sender.sendMessage(text=str(self.state))
+            return
+
         dispatcher.dispatch(self, msg)
 
-    def _starter(self):
-        self.sender.sendMessage(text="Hello", reply_markup=main_keyboard)
-        self.started = True
-
     def on_close(self, msg):
-        if self.exists:
+        if self.existed_before:
             query = (update_state1 + str(self.state.value) + update_state2 + str(self.chat_id))
         else:
             query = insert_state + str(self.chat_id) + "," + str(self.state.value) + ')'
         self.query.execute(query)
         self.connection.commit()
-        print("Timed out at state: " + str(self.state.value))
+        print("Timed out connection at state: " + str(self.state.value))
 
 
 if __name__ == '__main__':

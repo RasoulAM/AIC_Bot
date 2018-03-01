@@ -28,7 +28,7 @@ def _location_default_keyboard():
             loc_temp[0], loc_temp[1]
         ],
         [
-            loc_temp[2]
+            loc_temp[2], loc_temp[3]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)

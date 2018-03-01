@@ -6,7 +6,7 @@ from utilities.states import State
 
 admin_main_menu_texts = {
     State.ADMIN_PANEL: "پنل ادمین",
-    State.LOCATION: "نقشه دانشگاه" + emojies.get('location'),
+    State.LOCATION: "مکانها" + emojies.get('location'),
     State.POLL: "نظرسنجی" + emojies.get('clipboard'),
     State.SCHEDULE: "برنامه زمان بندی" + emojies.get('calender'),
     State.NEWS: "اطلاعات و اخبار" + emojies.get('information'),
@@ -35,6 +35,9 @@ locations_buttons_texts_mapping = {
 }
 
 dispatchers = {
+
+    State.MAIN: main_menu,
+
     # main menu
     State.LOCATION: map_loader,
     State.POLL: poll,
@@ -44,15 +47,20 @@ dispatchers = {
 
     State.LOCATION_JABER: location_jaber,
     State.LOCATION_LUNCH: location_lunch,
-    State.LOCATION_CE_DP: location_ce_dp
+    State.LOCATION_CE_DP: location_ce_dp,
+
+
+
+
 }
 
 
 def dispatch(delegate, msg):
     new_state = _transition(delegate.state, msg["text"])
-    if new_state:
+    if new_state: #transition
         delegate.state = new_state
-        dispatchers[delegate.state](delegate, msg)
+        if dispatchers[delegate.state]:
+            dispatchers[delegate.state](delegate, msg)
     else:
         delegate.sender.sendMessage(text="Going to None state!!")
 
@@ -71,6 +79,11 @@ transitions = {
 
     # Location transitions
     (State.LOCATION, main_menu_texts_mapping.get(State.LOCATION_JABER)): State.LOCATION_JABER,
+    (State.LOCATION, main_menu_texts_mapping.get(State.LOCATION_CE_DP)): State.LOCATION_CE_DP,
+    (State.LOCATION, main_menu_texts_mapping.get(State.LOCATION_LUNCH)): State.LOCATION_LUNCH,
+    (State.LOCATION, "بازگشت"): State.MAIN,
+
+    #
 
 }
 

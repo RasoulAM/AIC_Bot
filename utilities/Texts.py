@@ -20,7 +20,8 @@ main_menu_texts=[
 locations_buttons_texts = [
     "غذاخوری" + emojies.get('dining_hall'),
     "سالن جابر",
-    "دانشکده کامپیوتر"
+    "دانشکده کامپیوتر",
+    "بازگشت",
 ]
 
 
