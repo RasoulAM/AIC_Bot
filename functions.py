@@ -66,11 +66,24 @@ def admin_panel(delegate, msg):
     return State.ADMIN_PANEL
 
 
-def answer_messages(delegate, msg):
+def show_unanswered_messages(delegate, msg):
     messages = delegate.query.execute(fetch_messages).fetchall()
     delegate.connection.commit()
     if messages is None:
         delegate.sender.sendMessage(text="No unread messages!")
         return State.ADMIN_PANEL
     answering_message = messages[0]
-    return State.ANSWERING
+    delegate.sender.sendMessage(text=answering_message[1])
+    delegate.sender.sendMessage(text="پاسخ خود را بنویسید")
+    return State.ANSWER_MESSAGES
+
+def answer_message(delegate, msg):
+    messages = delegate.query.execute(fetch_messages).fetchall()
+    delegate.connection.commit()
+    answering_message_chat_id = messages[0][0]
+
+    delegate.sender.sendMessage(text="Your answer will be written in the database...")
+
+
+    return State.ADMIN_PANEL
+
