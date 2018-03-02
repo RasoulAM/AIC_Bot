@@ -5,7 +5,7 @@ import telepot
 from telepot.delegate import *
 from telepot.loop import MessageLoop
 
-import dispatcher
+import dispatHihcher
 from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
@@ -43,6 +43,9 @@ class StateHandler(telepot.helper.ChatHandler):
             self.sender.sendMessage(text=str(self.state))
             return
 
+        dispatcher.dispatch(self, msg)
+
+    def on_call_back_query(self, msg):
         dispatcher.dispatch(self, msg)
 
     def on_close(self, msg):

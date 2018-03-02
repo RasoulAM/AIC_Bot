@@ -66,11 +66,15 @@ def admin_panel(delegate, msg):
     return State.ADMIN_PANEL
 
 
-def answer_messages(delegate, msg):
+def read_messages(delegate, msg):
     messages = delegate.query.execute(fetch_messages).fetchall()
     delegate.connection.commit()
-    if messages is None:
+    if len(messages) == 0:
         delegate.sender.sendMessage(text="No unread messages!")
         return State.ADMIN_PANEL
+    else:
+        delegate.sender.sendMessage('%d. %d', messages[0][1], reply_markup = admin_read_message_keyboard)
     answering_message = messages[0]
     return State.ANSWERING
+
+

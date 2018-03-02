@@ -1,7 +1,7 @@
 # coding: utf-8
 
 
-from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
+from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
 
 from utilities.Texts import *
 
@@ -55,11 +55,31 @@ def _admin_panel_keyboard():
 def _day_selection_keyboard():
     btn_lst = [
         [
-            day_selection_buttons_texts[0], day_selection_buttons_texts[1],
-            day_selection_buttons_texts[2]
+            [
+                day_selection_buttons_texts[0]
+            ]
+            ,
+            [
+                day_selection_buttons_texts[1]
+            ],
+            [
+                day_selection_buttons_texts[2]
+            ]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
+
+
+def _admin_read_message_keyboard():
+    # btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
+    #     InlineKeyboardButton(text=admin_read_messages_buttons_texts[0], callback_data='read'),
+    #     InlineKeyboardButton(text=admin_read_messages_buttons_texts[1], callback_date='answer'),
+    # ]])
+    btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=admin_read_messages_buttons_texts[0], callback_data='read'),
+        InlineKeyboardButton(text=admin_read_messages_buttons_texts[1], callback_data='answer'),
+    ]])
+    return btn_lst
 
 
 main_keyboard = _main_keyboard()
@@ -67,3 +87,4 @@ location_keyboard = _location_default_keyboard()
 contact_us_keyboard = _contact_us_keyboard()
 admin_panel_keyboard = _admin_panel_keyboard()
 day_selection_keyboard = _day_selection_keyboard()
+admin_read_message_keyboard = _admin_read_message_keyboard()

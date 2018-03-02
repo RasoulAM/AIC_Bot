@@ -36,3 +36,17 @@ fetch_messages = '' \
                  """
                  select chat_id, Message from Messages where is_read = 0
                  """
+
+create_answer_table_query = '' \
+                            """
+                            create table answers(
+                            chat_id int,
+                            answer_text text,
+                            is_read int);
+                            """
+
+admin_insert_answer = '' \
+                      """
+                      insert into answers
+                      values ({0}, {1}, 0)
+                      """
