@@ -38,5 +38,11 @@ day_selection_buttons_texts = [
 ]
 
 
+admin_read_messages_buttons_texts = [
+    "خواندم",
+    "پاسخ"
+]
+
+
 
 

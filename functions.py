@@ -72,6 +72,8 @@ def show_unanswered_messages(delegate, msg):
     if messages is None:
         delegate.sender.sendMessage(text="No unread messages!")
         return State.ADMIN_PANEL
+    else:
+        delegate.sender.sendMessage('%d. %d', messages[0][1], reply_markup = admin_read_message_keyboard)
     answering_message = messages[0]
     delegate.sender.sendMessage(text=answering_message[1])
     delegate.sender.sendMessage(text="پاسخ خود را بنویسید")
@@ -86,4 +88,6 @@ def answer_message(delegate, msg):
 
 
     return State.ADMIN_PANEL
+
+
 
