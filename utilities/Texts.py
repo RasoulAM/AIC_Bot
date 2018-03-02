@@ -29,5 +29,12 @@ admin_panel_buttons_texts = [
     "بازگشت",
 ]
 
+day_selection_buttons_texts = [
+    "روز اول",
+    "روز دوم",
+    "بازگشت",
+]
+
+
 
 

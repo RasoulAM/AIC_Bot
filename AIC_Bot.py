@@ -37,6 +37,8 @@ class StateHandler(telepot.helper.ChatHandler):
         pprint(msg)
 
         # By writing "state", the state will be shown
+        if msg["text"] is None:
+            return
         if msg["text"] == "state":
             self.sender.sendMessage(text=str(self.state))
             return

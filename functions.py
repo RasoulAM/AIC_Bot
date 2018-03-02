@@ -2,6 +2,7 @@ from utilities.KeyBoards import *
 from utilities.Locations import *
 from utilities.states import *
 from utilities.Queries import *
+from utilities.media import *
 
 
 def main_menu(delegate, msg):
@@ -16,19 +17,24 @@ def map_loader(delegate, msg):
 
 
 def poll(delegate, msg):
-    pass
+    delegate.sender.sendMessage(text="Coming soon...")
 
 
 def news(delegate, msg):
-    pass
+    delegate.sender.sendMessage(text="Coming soon...")
 
 
 def schedule(delegate, msg):
-    pass
+    delegate.sender.sendMessage(text="روز مورد نظر را انتخاب کنید", reply_markup=day_selection_keyboard)
+    return State.SCHEDULE
+
+
+def show_schedule(delegate, msg):
+    delegate.sender.sendPhoto(schedule_images[msg["text"]])
 
 
 def photography_contest(delegate, msg):
-    pass
+    delegate.sender.sendMessage(text="Coming soon...")
 
 
 def inbox(delegate, msg):
@@ -68,4 +74,3 @@ def answer_messages(delegate, msg):
         return State.ADMIN_PANEL
     answering_message = messages[0]
     return State.ANSWERING
-

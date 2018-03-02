@@ -82,7 +82,9 @@ transitions = {
     (State.CONTACT_US, None): send_message_to_admin,
     (State.CONTACT_US, action_texts_mapping.get(Action.RETURN)): main_menu,
 
-    #
+    # Schedule state
+    (State.SCHEDULE, None): show_schedule,
+    (State.SCHEDULE, action_texts_mapping.get(Action.RETURN)): main_menu,
 
 }
 
