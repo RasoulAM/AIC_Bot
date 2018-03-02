@@ -5,7 +5,7 @@ import telepot
 from telepot.delegate import *
 from telepot.loop import MessageLoop
 
-import dispatHihcher
+import dispatcher
 from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
