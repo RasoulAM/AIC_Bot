@@ -11,13 +11,15 @@ query = con.cursor()
 # query.execute("select * from Messages")
 # a = query.fetchall()
 # print(a)
+query.execute("delete from Messages where 1=1")
+# query.execute("delete from answers where 1=1")
 # query.execute("delete from states where 1=1")
 # query.execute(messages_create_table)
 #
-query.execute("""
-                            create table answers(
-                            chat_id int,
-                            answer_text text,
-                            is_read int);
-                            """)
+# query.execute("""
+#                             create table answers(
+#                             chat_id int,
+#                             answer_text text,
+#                             is_read int);
+#                             """)
 con.commit()

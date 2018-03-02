@@ -10,7 +10,8 @@ from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
 
-TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
+TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
+# TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
 chat_ids = telepot.helper.SafeDict()
 
@@ -23,6 +24,8 @@ class StateHandler(telepot.helper.ChatHandler):
         id_in_database = self.query.execute(fetch_user + str(self.chat_id)).fetchall()
         self.connection.commit()
         self.existed_before = False
+        self.answer_to = None
+        self.bott = bot
         if id_in_database:
             self.state = State(id_in_database[0][1])
             self.existed_before = True
@@ -45,7 +48,8 @@ class StateHandler(telepot.helper.ChatHandler):
 
         dispatcher.dispatch(self, msg)
 
-    def on_call_back_query(self, msg):
+    def on_callback_query(self, msg):
+        pprint(msg)
         dispatcher.dispatch(self, msg)
 
     def on_close(self, msg):
@@ -59,9 +63,10 @@ class StateHandler(telepot.helper.ChatHandler):
 
 
 if __name__ == '__main__':
-    bot = telepot.DelegatorBot(TOKEN, {
-        pave_event_space()(
-            per_chat_id(), create_open, StateHandler, timeout=200),
-    })
+    bot = telepot.DelegatorBot(TOKEN, [
+        include_callback_query_chat_id(
+            pave_event_space())(
+            per_chat_id(), create_open, StateHandler, timeout=40),
+    ])
 
     MessageLoop(bot).run_forever()

@@ -47,6 +47,30 @@ create_answer_table_query = '' \
 
 admin_insert_answer = '' \
                       """
-                      insert into answers
-                      values ({0}, {1}, 0)
+                      insert into answers(chat_id, answer_text, is_read)
+                      values ({0}, {1}, {2})
                       """
+
+update_message_is_answered_status1 = '' \
+                        """
+                        update Messages set is_answered = 1
+                        WHERE chat_id = {0}
+                        """
+
+update_message_is_read_status = '' \
+                         """
+                         update Messages set is_read = 1
+                         WHERE chat_id = {0}
+                         """
+
+fetch_answers = '' \
+                """
+                select answer_text from answers WHERE chat_id = {0} and is_read = 0
+                """
+
+
+update_answer_is_read_status = '' \
+                               """
+                               update answers set is_read = 1
+                               where chat_id = {0}
+                               """

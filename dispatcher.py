@@ -7,7 +7,11 @@ from utilities.states import State, Action
 state_texts_mapping = {
     State.ADMIN_PANEL: "پنل ادمین",
 
-    State.ANSWER_MESSAGES: "خواندن پیامها",
+    State.ANSWER_OR_PASS: "خواندن پیامها",
+
+    State.ANSWERING: "answer",
+    State.PASS: "pass",
+
 
     State.LOCATION: "مکانها" + emojies.get('location'),
     State.POLL: "نظرسنجی" + emojies.get('clipboard'),
@@ -19,7 +23,9 @@ state_texts_mapping = {
 
     State.LOCATION_LUNCH: "غذاخوری" + emojies.get('dining_hall'),
     State.LOCATION_JABER: "سالن جابر",
-    State.LOCATION_CE_DP: "دانشکده کامپیوتر"
+    State.LOCATION_CE_DP: "دانشکده کامپیوتر",
+
+
 
 }
 
@@ -46,16 +52,23 @@ dispatchers = {
 
 
 def dispatch(delegate, msg):
-    if transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is None:
-        return
-    elif transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is not None:
-        print(delegate.state)
-        new_state = transitions.get((delegate.state, None))(delegate, msg)
-        print(new_state)
-    else:
-        new_state = transitions.get((delegate.state, msg["text"]))(delegate, msg)
-    if new_state:
-        delegate.state = new_state
+    if "data" in msg.keys():
+        print(msg["data"])
+        new_state = transitions.get((delegate.state, msg["data"]))(delegate, msg)
+        if new_state:
+            delegate.state = new_state
+    elif "text" in msg.keys():
+        if transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is None:
+            return
+        elif transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is not None:
+            print(delegate.state)
+            new_state = transitions.get((delegate.state, None))(delegate, msg)
+            print(new_state)
+
+        else:
+            new_state = transitions.get((delegate.state, msg["text"]))(delegate, msg)
+        if new_state:
+            delegate.state = new_state
 
 
 transitions = {
@@ -74,11 +87,13 @@ transitions = {
 
     # admin panel transitions
     (State.ADMIN_PANEL, action_texts_mapping.get(Action.RETURN)): main_menu,
-    (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_MESSAGES)): show_unanswered_messages,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_OR_PASS)): show_unanswered_messages,
 
     # (State.ANSWER_MESSAGES, ""): show_unanswered_messages,
-    (State.ANSWER_MESSAGES, action_texts_mapping.get(Action.RETURN)): admin_panel,
-    (State.ANSWER_MESSAGES, None): answer_message,
+    (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
+    (State.ANSWER_OR_PASS, state_texts_mapping.get(State.ANSWERING)): to_answer,
+    (State.ANSWER_OR_PASS, state_texts_mapping.get(State.PASS)): pass_message,
+    (State.ANSWERING, None): answer_message,
     (State.ANSWERING, action_texts_mapping.get(Action.RETURN)): main_menu,
 
     # Location transitions

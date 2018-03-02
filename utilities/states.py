@@ -4,8 +4,9 @@ from enum import Enum
 class State(Enum):
     MAIN = 1
     ADMIN_PANEL = 2
-    ANSWER_MESSAGES = 3
+    ANSWER_OR_PASS = 3
     ANSWERING = 4
+    PASS = 5
 
     # main menu
     LOCATION = 101
@@ -24,6 +25,7 @@ class State(Enum):
     # schedules
     SCHEDULE_DAY1 = 121
     SCHEDULE_DAY2 = 122
+
 
 
 class Action(Enum):

@@ -37,7 +37,7 @@ def _location_default_keyboard():
 def _contact_us_keyboard():
     btn_lst = [
         [
-            locations_buttons_texts[3]
+            locations_buttons_texts[5]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
@@ -55,17 +55,17 @@ def _admin_panel_keyboard():
 def _day_selection_keyboard():
     btn_lst = [
         [
-            [
-                day_selection_buttons_texts[0]
-            ]
-            ,
-            [
-                day_selection_buttons_texts[1]
-            ],
-            [
-                day_selection_buttons_texts[2]
-            ]
+            day_selection_buttons_texts[0]
         ]
+        ,
+        [
+            day_selection_buttons_texts[1]
+        ]
+        ,
+        [
+            day_selection_buttons_texts[2]
+        ]
+        
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
 
@@ -76,7 +76,7 @@ def _admin_read_message_keyboard():
     #     InlineKeyboardButton(text=admin_read_messages_buttons_texts[1], callback_date='answer'),
     # ]])
     btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
-        InlineKeyboardButton(text=admin_read_messages_buttons_texts[0], callback_data='read'),
+        InlineKeyboardButton(text=admin_read_messages_buttons_texts[0], callback_data='pass'),
         InlineKeyboardButton(text=admin_read_messages_buttons_texts[1], callback_data='answer'),
     ]])
     return btn_lst

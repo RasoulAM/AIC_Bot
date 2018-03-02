@@ -31,14 +31,23 @@ def schedule(delegate, msg):
 
 def show_schedule(delegate, msg):
     delegate.sender.sendPhoto(schedule_images[msg["text"]])
+    return State.SCHEDULE
 
 
 def photography_contest(delegate, msg):
     delegate.sender.sendMessage(text="Coming soon...")
+    return State.MAIN
 
 
 def inbox(delegate, msg):
-    pass
+    answers = delegate.query.execute(fetch_answers.format(delegate.chat_id)).fetchall()
+    for i in answers:
+        delegate.sender.sendMessage(text=i[0])
+    if len(answers) == 0:
+        delegate.sender.sendMessage(text="پیام جدیدی برای شما نیست !")
+    delegate.query.execute(update_answer_is_read_status.format(delegate.chat_id))
+    delegate.connection.commit()
+    return State.MAIN
 
 
 def contact_us(delegate, msg):
@@ -74,17 +83,36 @@ def show_unanswered_messages(delegate, msg):
         return State.ADMIN_PANEL
     else:
         delegate.sender.sendMessage('{0}'.format(messages[0][1]), reply_markup=admin_read_message_keyboard)
+        delegate.answer_to = messages[0][0]
     answering_message = messages[0]
     # delegate.sender.sendMessage(text=answering_message[1])
     # delegate.sender.sendMessage(text="پاسخ خود را بنویسید")
-    return State.ANSWER_MESSAGES
+    return State.ANSWER_OR_PASS
+
+
+def to_answer(delegate, msg):
+    delegate.sender.sendMessage("پاسخ خود را بنویسید")
+    return State.ANSWERING
 
 
 def answer_message(delegate, msg):
-    messages = delegate.query.execute(fetch_messages).fetchall()
+    # print(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', 0))
+    delegate.query.execute(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', 0))
+    # delegate.query.execute("insert into answers values(123, 'سلام', 0)")
     delegate.connection.commit()
-    answering_message_chat_id = messages[0][0]
+    delegate.query.execute(update_message_is_answered_status1.format(delegate.answer_to))
+    delegate.connection.commit()
+    delegate.query.execute(update_message_is_read_status.format(delegate.answer_to))
+    delegate.connection.commit()
+    print(delegate.answer_to)
+    delegate.bott.sendMessage(chat_id=delegate.answer_to, text="پاسخی برای شما ارسال شده")
+    delegate.sender.sendMessage(text="Your answer will be written in the database...", reply_markup=admin_panel_keyboard)
 
-    delegate.sender.sendMessage(text="Your answer will be written in the database...")
+    return State.ADMIN_PANEL
 
+
+def pass_message(delegate, msg):
+    delegate.query.execute(update_message_is_read_status.format(delegate.answer_to))
+    delegate.connection.commit()
+    delegate.sender.sendMessage(text="پنل ادمین", reply_markup=admin_panel_keyboard)
     return State.ADMIN_PANEL
