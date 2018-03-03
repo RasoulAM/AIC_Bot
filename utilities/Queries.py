@@ -74,3 +74,36 @@ update_answer_is_read_status = '' \
                                update answers set is_read = 1
                                where chat_id = {0}
                                """
+
+insert_into_rates_query = '' \
+                          """
+                          insert into rates
+                          VALUES ({0}, {1})
+                          """
+
+
+create_rates_table_query = '' \
+                           """
+                           create table rates(
+                           chat_id int,
+                           rate int)
+                           """
+
+check_update_or_insert_rate_query = '' \
+                                    """
+                                    select chat_id from rates
+                                    where chat_id = {0}
+                                    """
+
+
+update_rates_query = '' \
+                          """
+                          update rates set rate = {0}
+                          where chat_id = {1}
+                          """
+
+fetch_poll_result = '' \
+                    """
+                    select sum(rate) / count(*) from rates
+                    """
+

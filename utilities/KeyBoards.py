@@ -46,7 +46,7 @@ def _contact_us_keyboard():
 def _admin_panel_keyboard():
     btn_lst = [
         [
-            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1]
+            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
@@ -71,13 +71,20 @@ def _day_selection_keyboard():
 
 
 def _admin_read_message_keyboard():
-    # btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
-    #     InlineKeyboardButton(text=admin_read_messages_buttons_texts[0], callback_data='read'),
-    #     InlineKeyboardButton(text=admin_read_messages_buttons_texts[1], callback_date='answer'),
-    # ]])
     btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton(text=admin_read_messages_buttons_texts[0], callback_data='pass'),
         InlineKeyboardButton(text=admin_read_messages_buttons_texts[1], callback_data='answer'),
+    ]])
+    return btn_lst
+
+
+def _polling_keyboard():
+    btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=polling_button_texts[0], callback_data='very happy'),
+        InlineKeyboardButton(text=polling_button_texts[1], callback_data='happy'),
+        InlineKeyboardButton(text=polling_button_texts[2], callback_data='poker'),
+        InlineKeyboardButton(text=polling_button_texts[3], callback_data='angry'),
+        InlineKeyboardButton(text=polling_button_texts[4], callback_data='very angry'),
     ]])
     return btn_lst
 
@@ -88,3 +95,4 @@ contact_us_keyboard = _contact_us_keyboard()
 admin_panel_keyboard = _admin_panel_keyboard()
 day_selection_keyboard = _day_selection_keyboard()
 admin_read_message_keyboard = _admin_read_message_keyboard()
+polling_keyboard = _polling_keyboard()

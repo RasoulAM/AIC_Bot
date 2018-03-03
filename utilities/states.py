@@ -7,6 +7,7 @@ class State(Enum):
     ANSWER_OR_PASS = 3
     ANSWERING = 4
     PASS = 5
+    POLL_RESULT = 6
 
     # main menu
     LOCATION = 101
@@ -25,6 +26,14 @@ class State(Enum):
     # schedules
     SCHEDULE_DAY1 = 121
     SCHEDULE_DAY2 = 122
+
+    # poll
+    POLL_very_happy = 131
+    POLL_happy = 132
+    POLL_poker = 133
+    POLL_angry = 134
+    POLL_very_angry = 135
+
 
 
 

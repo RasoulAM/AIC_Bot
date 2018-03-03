@@ -28,6 +28,7 @@ locations_buttons_texts = [
 
 admin_panel_buttons_texts = [
     "خواندن پیامها",
+    "نتیجه نظر سنجی",
     "بازگشت",
 ]
 
@@ -43,6 +44,14 @@ admin_read_messages_buttons_texts = [
     "پاسخ"
 ]
 
+
+polling_button_texts = [
+    emojies.get("very happy"),
+    emojies.get("happy"),
+    emojies.get("poker"),
+    emojies.get("angry"),
+    emojies.get("very angry")
+]
 
 
 

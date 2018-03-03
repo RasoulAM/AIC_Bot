@@ -10,8 +10,8 @@ from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
 
-TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
-# TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
+# TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
+TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
 chat_ids = telepot.helper.SafeDict()
 
@@ -63,6 +63,36 @@ class StateHandler(telepot.helper.ChatHandler):
 
 
 if __name__ == '__main__':
+    # try:
+    #     connection = sqlite3.connect(db_path, check_same_thread=False)
+    #     query = connection.cursor()
+    #     query.execute("create table states"
+    #                 "(chat_ids int primary key, "
+    #                 "states int)")
+    #     connection.commit()
+    #     connection = sqlite3.connect(db_path, check_same_thread=False)
+    #     query = connection.cursor()
+    #     query.execute("""create table Messages(
+    #                     chat_id int,
+    #                     Message text,
+    #                     is_read int,
+    #                     is_answered int)""")
+    #     connection.commit()
+    #     connection = sqlite3.connect(db_path, check_same_thread=False)
+    #     query = connection.cursor()
+    #     query.execute("create table states"
+    #                   "(chat_ids int primary key, "
+    #                   "states int)")
+    #     connection.commit()
+    #     connection = sqlite3.connect(db_path, check_same_thread=False)
+    #     query = connection.cursor()
+    #     query.execute("create table states"
+    #                   "(chat_ids int primary key, "
+    #                   "states int)")
+    #     connection.commit()
+    # except exception:
+    #     print(exception)
+    # finally:
     bot = telepot.DelegatorBot(TOKEN, [
         include_callback_query_chat_id(
             pave_event_space())(

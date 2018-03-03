@@ -8,9 +8,17 @@ state_texts_mapping = {
     State.ADMIN_PANEL: "پنل ادمین",
 
     State.ANSWER_OR_PASS: "خواندن پیامها",
-
     State.ANSWERING: "answer",
     State.PASS: "pass",
+
+    State.POLL_RESULT: "نتیجه نظر سنجی",
+
+    State.POLL_very_happy: "very happy",
+    State.POLL_happy: "happy",
+    State.POLL_very_angry: "very angry",
+    State.POLL_angry: "angry",
+    State.POLL_poker: "poker",
+
 
 
     State.LOCATION: "مکانها" + emojies.get('location'),
@@ -88,6 +96,7 @@ transitions = {
     # admin panel transitions
     (State.ADMIN_PANEL, action_texts_mapping.get(Action.RETURN)): main_menu,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_OR_PASS)): show_unanswered_messages,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.POLL_RESULT)): poll_result,
 
     # (State.ANSWER_MESSAGES, ""): show_unanswered_messages,
     (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
@@ -108,5 +117,13 @@ transitions = {
     # Schedule state
     (State.SCHEDULE, None): show_schedule,
     (State.SCHEDULE, action_texts_mapping.get(Action.RETURN)): main_menu,
+
+    # Poll state
+    (State.POLL, state_texts_mapping.get(State.POLL_very_happy)): polling,
+    (State.POLL, state_texts_mapping.get(State.POLL_happy)): polling,
+    (State.POLL, state_texts_mapping.get(State.POLL_poker)): polling,
+    (State.POLL, state_texts_mapping.get(State.POLL_angry)): polling,
+    (State.POLL, state_texts_mapping.get(State.POLL_very_angry)): polling,
+    (State.POLL, action_texts_mapping.get(Action.RETURN)):main_menu,
 
 }

@@ -17,7 +17,10 @@ def map_loader(delegate, msg):
 
 
 def poll(delegate, msg):
-    delegate.sender.sendMessage(text="Coming soon...")
+    delegate.sender.sendMessage(text="نظر سنجی:", reply_markup=contact_us_keyboard)
+    delegate.sender.sendMessage(text="نظر خود درباره برگزاری رویداد را انتخاب کنید!", reply_markup=polling_keyboard)
+
+    return State.POLL
 
 
 def news(delegate, msg):
@@ -115,4 +118,34 @@ def pass_message(delegate, msg):
     delegate.query.execute(update_message_is_read_status.format(delegate.answer_to))
     delegate.connection.commit()
     delegate.sender.sendMessage(text="پنل ادمین", reply_markup=admin_panel_keyboard)
+    return State.ADMIN_PANEL
+
+
+def polling(delegate, msg):
+    rate = 0
+    if msg["data"] == "very happy":
+        rate = 5
+    elif msg["data"] == "happy":
+        rate = 4
+    elif msg["data"] == "poker":
+        rate = 3
+    elif msg["data"] == "angry":
+        rate = 2
+    elif msg["data"] == "very angry":
+        rate = 1
+    is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id)).fetchall()
+    print(is_there)
+    delegate.connection.commit()
+    if len(is_there) == 0:
+        delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate))
+    else:
+        delegate.query.execute(update_rates_query.format(rate, delegate.chat_id))
+    delegate.connection.commit()
+    delegate.sender.sendMessage(text="با تشکر! نظر شما ثبت شد", reply_markup=main_keyboard)
+    return State.MAIN
+
+
+def poll_result(delegate, msg):
+    result = delegate.query.execute(fetch_poll_result).fetchall()
+    delegate.sender.sendMessage(text="نتیجه نظرسنجی تا این لحظه = {0}".format(result[0][0]))
     return State.ADMIN_PANEL
