@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="57e3c548-c6e4-45d3-b821-a18317e37ff0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AIC_Bot.py" afterPath="$PROJECT_DIR$/AIC_Bot.py" />
       <change beforePath="$PROJECT_DIR$/dispatcher.py" afterPath="$PROJECT_DIR$/dispatcher.py" />
       <change beforePath="$PROJECT_DIR$/functions.py" afterPath="$PROJECT_DIR$/functions.py" />
       <change beforePath="$PROJECT_DIR$/utilities/DB.py" afterPath="$PROJECT_DIR$/utilities/DB.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/Emojies_table.py" afterPath="$PROJECT_DIR$/utilities/Emojies_table.py" />
       <change beforePath="$PROJECT_DIR$/utilities/KeyBoards.py" afterPath="$PROJECT_DIR$/utilities/KeyBoards.py" />
       <change beforePath="$PROJECT_DIR$/utilities/Queries.py" afterPath="$PROJECT_DIR$/utilities/Queries.py" />
       <change beforePath="$PROJECT_DIR$/utilities/Texts.py" afterPath="$PROJECT_DIR$/utilities/Texts.py" />
@@ -21,8 +19,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AIC_Bot$DB.coverage" NAME="DB Coverage Results" MODIFIED="1520081808646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities" />
-    <SUITE FILE_PATH="coverage/AIC_Bot$AIC_Bot.coverage" NAME="AIC_Bot Coverage Results" MODIFIED="1520082267183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/AIC_Bot$DB.coverage" NAME="DB Coverage Results" MODIFIED="1520188897435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities" />
+    <SUITE FILE_PATH="coverage/AIC_Bot$AIC_Bot.coverage" NAME="AIC_Bot Coverage Results" MODIFIED="1520189451385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AIC_Bot$states.coverage" NAME="states Coverage Results" MODIFIED="1519842851422" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utilities" />
     <SUITE FILE_PATH="coverage/AIC_Bot$dispatcher.coverage" NAME="dispatcher Coverage Results" MODIFIED="1519841833106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/AIC_Bot$functions.coverage" NAME="functions Coverage Results" MODIFIED="1519987111460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -41,11 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="79" column="29" lean-forward="true" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
+            <state relative-caret-position="276">
+              <caret line="67" column="20" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
               <folding>
                 <marker date="1520082224753" expanded="true" signature="2303:2410" ph="create table... states" />
                 <marker date="1520082224753" expanded="true" signature="2581:2764" ph="create table... Messages" />
@@ -57,16 +55,17 @@
       <file leaf-file-name="DB.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="147">
+              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
               <folding>
-                <marker date="1520081808581" expanded="true" signature="183:278" ph="create table... states" />
-                <marker date="1520081808581" expanded="true" signature="374:401" ph="delete from Messages... " />
-                <marker date="1520081808581" expanded="true" signature="374:404" ph="delete from s... " />
-                <marker date="1520081808581" expanded="true" signature="521:550" ph="delete from answers... " />
-                <marker date="1520081808581" expanded="true" signature="570:592" ph="select * fro... Messages" />
-                <marker date="1520081808581" expanded="true" signature="645:672" ph="delete from states... " />
-                <marker date="1520081808581" expanded="true" signature="777:877" ph="create table... rates" />
+                <marker date="1520188897377" expanded="true" signature="183:278" ph="create table... states" />
+                <marker date="1520188897377" expanded="true" signature="296:318" ph="select * fro... Messages" />
+                <marker date="1520188897377" expanded="true" signature="372:399" ph="delete from Messages... " />
+                <marker date="1520188897377" expanded="true" signature="372:402" ph="delete from s... " />
+                <marker date="1520188897377" expanded="true" signature="519:548" ph="delete from answers... " />
+                <marker date="1520188897377" expanded="true" signature="568:590" ph="select * fro... Messages" />
+                <marker date="1520188897377" expanded="true" signature="645:672" ph="delete from states... " />
+                <marker date="1520188897377" expanded="true" signature="777:877" ph="create table... rates" />
               </folding>
             </state>
           </provider>
@@ -75,8 +74,8 @@
       <file leaf-file-name="dispatcher.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dispatcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="210">
+              <caret line="95" column="48" lean-forward="false" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -84,15 +83,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3045">
-              <caret line="149" column="90" lean-forward="false" selection-start-line="149" selection-start-column="90" selection-end-line="149" selection-end-column="90" />
+            <state relative-caret-position="366">
+              <caret line="168" column="62" lean-forward="false" selection-start-line="168" selection-start-column="62" selection-end-line="168" selection-end-column="62" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
-                <marker date="1520080922022" expanded="true" signature="3516:3547" ph="insert into answers... " />
-                <marker date="1520080922022" expanded="true" signature="3516:3558" ph="insert into answers... " />
+                <marker date="1520189519931" expanded="true" signature="3712:3743" ph="insert into answers... " />
+                <marker date="1520189519931" expanded="true" signature="3712:3754" ph="insert into answers... " />
               </folding>
             </state>
           </provider>
@@ -101,28 +100,29 @@
       <file leaf-file-name="Queries.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="24" column="36" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="24" selection-end-column="36" />
+            <state relative-caret-position="366">
+              <caret line="111" column="29" lean-forward="false" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
               <folding>
-                <marker date="1520080895449" expanded="true" signature="16:42" ph="insert into states... " />
-                <marker date="1520080895449" expanded="true" signature="100:136" ph="select * fro... states" />
-                <marker date="1520080895449" expanded="true" signature="210:236" ph="update states... " />
-                <marker date="1520080895449" expanded="true" signature="416:575" ph="create table... Messages" />
-                <marker date="1520080895449" expanded="true" signature="656:700" ph="insert into Messages... " />
-                <marker date="1520080895449" expanded="true" signature="781:836" ph="select chat_... Messages" />
-                <marker date="1520080895449" expanded="true" signature="952:1101" ph="create table... answers" />
-                <marker date="1520080895449" expanded="true" signature="1211:1306" ph="insert into answers... " />
-                <marker date="1520080895449" expanded="true" signature="1428:1507" ph="update Messages... " />
-                <marker date="1520080895449" expanded="true" signature="1628:1704" ph="update Messages... " />
-                <marker date="1520080895449" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
-                <marker date="1520080895449" expanded="true" signature="1792:1859" ph="select answe... answers" />
-                <marker date="1520080895449" expanded="true" signature="1984:2065" ph="update answers... " />
-                <marker date="1520080895449" expanded="true" signature="2189:2250" ph="insert into rates... " />
-                <marker date="1520080895449" expanded="true" signature="2373:2469" ph="create table... rates" />
-                <marker date="1520080895449" expanded="true" signature="2619:2700" ph="select chat_... rates" />
-                <marker date="1520080895449" expanded="true" signature="2825:2898" ph="update rates... " />
-                <marker date="1520080895449" expanded="true" signature="2831:2879" ph="insert into rates... " />
-                <marker date="1520080895449" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+                <marker date="1520189451326" expanded="true" signature="16:42" ph="insert into states... " />
+                <marker date="1520189451326" expanded="true" signature="100:136" ph="select * fro... states" />
+                <marker date="1520189451326" expanded="true" signature="210:236" ph="update states... " />
+                <marker date="1520189451326" expanded="true" signature="416:575" ph="create table... Messages" />
+                <marker date="1520189451326" expanded="true" signature="656:700" ph="insert into Messages... " />
+                <marker date="1520189451326" expanded="true" signature="781:836" ph="select chat_... Messages" />
+                <marker date="1520189451326" expanded="true" signature="952:1101" ph="create table... answers" />
+                <marker date="1520189451326" expanded="true" signature="1211:1306" ph="insert into answers... " />
+                <marker date="1520189451326" expanded="true" signature="1428:1507" ph="update Messages... " />
+                <marker date="1520189451326" expanded="true" signature="1628:1704" ph="update Messages... " />
+                <marker date="1520189451326" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
+                <marker date="1520189451326" expanded="true" signature="1792:1859" ph="select answe... answers" />
+                <marker date="1520189451326" expanded="true" signature="1984:2065" ph="update answers... " />
+                <marker date="1520189451326" expanded="true" signature="2189:2250" ph="insert into rates... " />
+                <marker date="1520189451326" expanded="true" signature="2373:2469" ph="create table... rates" />
+                <marker date="1520189451326" expanded="true" signature="2619:2700" ph="select chat_... rates" />
+                <marker date="1520189451326" expanded="true" signature="2825:2898" ph="update rates... " />
+                <marker date="1520189451326" expanded="true" signature="2831:2879" ph="insert into rates... " />
+                <marker date="1520189451326" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+                <marker date="1520189451326" expanded="true" signature="3114:3141" ph="select chat_... states" />
               </folding>
             </state>
           </provider>
@@ -131,8 +131,8 @@
       <file leaf-file-name="KeyBoards.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="966">
-              <caret line="48" column="100" lean-forward="false" selection-start-line="48" selection-start-column="100" selection-end-line="48" selection-end-column="100" />
+            <state relative-caret-position="252">
+              <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -141,8 +141,8 @@
       <file leaf-file-name="Texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="462">
+              <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -163,8 +163,8 @@
       <file leaf-file-name="states.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/states.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            <state relative-caret-position="231">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -182,6 +182,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>conta</find>
+      <find>dispatchers</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,15 +195,15 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/utilities/media.py" />
         <option value="$PROJECT_DIR$/utilities/Locations.py" />
+        <option value="$PROJECT_DIR$/utilities/Emojies_table.py" />
+        <option value="$PROJECT_DIR$/AIC_Bot.py" />
+        <option value="$PROJECT_DIR$/utilities/states.py" />
+        <option value="$PROJECT_DIR$/dispatcher.py" />
+        <option value="$PROJECT_DIR$/utilities/DB.py" />
         <option value="$PROJECT_DIR$/utilities/Texts.py" />
         <option value="$PROJECT_DIR$/utilities/KeyBoards.py" />
-        <option value="$PROJECT_DIR$/utilities/states.py" />
-        <option value="$PROJECT_DIR$/utilities/Emojies_table.py" />
-        <option value="$PROJECT_DIR$/dispatcher.py" />
         <option value="$PROJECT_DIR$/utilities/Queries.py" />
         <option value="$PROJECT_DIR$/functions.py" />
-        <option value="$PROJECT_DIR$/utilities/DB.py" />
-        <option value="$PROJECT_DIR$/AIC_Bot.py" />
       </list>
     </option>
   </component>
@@ -216,6 +217,25 @@
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1030" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyPep8Inspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -233,6 +253,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,7 +270,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520006405661</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="polling handling">
+      <created>1520093913798</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1520093913798</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -420,9 +447,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.5072917" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22989808" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.48925886" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32616082" sideWeight="0.48925886" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20730397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -453,7 +480,8 @@
     <MESSAGE value="schedule working, some stuff added" />
     <MESSAGE value="locations added" />
     <MESSAGE value="admin answer message section" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin answer message section" />
+    <MESSAGE value="polling handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="polling handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -465,25 +493,26 @@
         <state relative-caret-position="210">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding>
-            <marker date="1520080895449" expanded="true" signature="16:42" ph="insert into states... " />
-            <marker date="1520080895449" expanded="true" signature="100:136" ph="select * fro... states" />
-            <marker date="1520080895449" expanded="true" signature="210:236" ph="update states... " />
-            <marker date="1520080895449" expanded="true" signature="416:575" ph="create table... Messages" />
-            <marker date="1520080895449" expanded="true" signature="656:700" ph="insert into Messages... " />
-            <marker date="1520080895449" expanded="true" signature="781:836" ph="select chat_... Messages" />
-            <marker date="1520080895449" expanded="true" signature="952:1101" ph="create table... answers" />
-            <marker date="1520080895449" expanded="true" signature="1211:1306" ph="insert into answers... " />
-            <marker date="1520080895449" expanded="true" signature="1428:1507" ph="update Messages... " />
-            <marker date="1520080895449" expanded="true" signature="1628:1704" ph="update Messages... " />
-            <marker date="1520080895449" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
-            <marker date="1520080895449" expanded="true" signature="1792:1859" ph="select answe... answers" />
-            <marker date="1520080895449" expanded="true" signature="1984:2065" ph="update answers... " />
-            <marker date="1520080895449" expanded="true" signature="2189:2250" ph="insert into rates... " />
-            <marker date="1520080895449" expanded="true" signature="2373:2469" ph="create table... rates" />
-            <marker date="1520080895449" expanded="true" signature="2619:2700" ph="select chat_... rates" />
-            <marker date="1520080895449" expanded="true" signature="2825:2898" ph="update rates... " />
-            <marker date="1520080895449" expanded="true" signature="2831:2879" ph="insert into rates... " />
-            <marker date="1520080895449" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+            <marker date="1520189451326" expanded="true" signature="16:42" ph="insert into states... " />
+            <marker date="1520189451326" expanded="true" signature="100:136" ph="select * fro... states" />
+            <marker date="1520189451326" expanded="true" signature="210:236" ph="update states... " />
+            <marker date="1520189451326" expanded="true" signature="416:575" ph="create table... Messages" />
+            <marker date="1520189451326" expanded="true" signature="656:700" ph="insert into Messages... " />
+            <marker date="1520189451326" expanded="true" signature="781:836" ph="select chat_... Messages" />
+            <marker date="1520189451326" expanded="true" signature="952:1101" ph="create table... answers" />
+            <marker date="1520189451326" expanded="true" signature="1211:1306" ph="insert into answers... " />
+            <marker date="1520189451326" expanded="true" signature="1428:1507" ph="update Messages... " />
+            <marker date="1520189451326" expanded="true" signature="1628:1704" ph="update Messages... " />
+            <marker date="1520189451326" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
+            <marker date="1520189451326" expanded="true" signature="1792:1859" ph="select answe... answers" />
+            <marker date="1520189451326" expanded="true" signature="1984:2065" ph="update answers... " />
+            <marker date="1520189451326" expanded="true" signature="2189:2250" ph="insert into rates... " />
+            <marker date="1520189451326" expanded="true" signature="2373:2469" ph="create table... rates" />
+            <marker date="1520189451326" expanded="true" signature="2619:2700" ph="select chat_... rates" />
+            <marker date="1520189451326" expanded="true" signature="2825:2898" ph="update rates... " />
+            <marker date="1520189451326" expanded="true" signature="2831:2879" ph="insert into rates... " />
+            <marker date="1520189451326" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+            <marker date="1520189451326" expanded="true" signature="3114:3141" ph="select chat_... states" />
           </folding>
         </state>
       </provider>
@@ -493,13 +522,14 @@
         <state relative-caret-position="84">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <marker date="1520081808581" expanded="true" signature="183:278" ph="create table... states" />
-            <marker date="1520081808581" expanded="true" signature="374:401" ph="delete from Messages... " />
-            <marker date="1520081808581" expanded="true" signature="374:404" ph="delete from s... " />
-            <marker date="1520081808581" expanded="true" signature="521:550" ph="delete from answers... " />
-            <marker date="1520081808581" expanded="true" signature="570:592" ph="select * fro... Messages" />
-            <marker date="1520081808581" expanded="true" signature="645:672" ph="delete from states... " />
-            <marker date="1520081808581" expanded="true" signature="777:877" ph="create table... rates" />
+            <marker date="1520188897377" expanded="true" signature="183:278" ph="create table... states" />
+            <marker date="1520188897377" expanded="true" signature="296:318" ph="select * fro... Messages" />
+            <marker date="1520188897377" expanded="true" signature="372:399" ph="delete from Messages... " />
+            <marker date="1520188897377" expanded="true" signature="372:402" ph="delete from s... " />
+            <marker date="1520188897377" expanded="true" signature="519:548" ph="delete from answers... " />
+            <marker date="1520188897377" expanded="true" signature="568:590" ph="select * fro... Messages" />
+            <marker date="1520188897377" expanded="true" signature="645:672" ph="delete from states... " />
+            <marker date="1520188897377" expanded="true" signature="777:877" ph="create table... rates" />
           </folding>
         </state>
       </provider>
@@ -549,25 +579,26 @@
         <state relative-caret-position="180">
           <caret line="10" column="38" lean-forward="false" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
           <folding>
-            <marker date="1520080895449" expanded="true" signature="16:42" ph="insert into states... " />
-            <marker date="1520080895449" expanded="true" signature="100:136" ph="select * fro... states" />
-            <marker date="1520080895449" expanded="true" signature="210:236" ph="update states... " />
-            <marker date="1520080895449" expanded="true" signature="416:575" ph="create table... Messages" />
-            <marker date="1520080895449" expanded="true" signature="656:700" ph="insert into Messages... " />
-            <marker date="1520080895449" expanded="true" signature="781:836" ph="select chat_... Messages" />
-            <marker date="1520080895449" expanded="true" signature="952:1101" ph="create table... answers" />
-            <marker date="1520080895449" expanded="true" signature="1211:1306" ph="insert into answers... " />
-            <marker date="1520080895449" expanded="true" signature="1428:1507" ph="update Messages... " />
-            <marker date="1520080895449" expanded="true" signature="1628:1704" ph="update Messages... " />
-            <marker date="1520080895449" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
-            <marker date="1520080895449" expanded="true" signature="1792:1859" ph="select answe... answers" />
-            <marker date="1520080895449" expanded="true" signature="1984:2065" ph="update answers... " />
-            <marker date="1520080895449" expanded="true" signature="2189:2250" ph="insert into rates... " />
-            <marker date="1520080895449" expanded="true" signature="2373:2469" ph="create table... rates" />
-            <marker date="1520080895449" expanded="true" signature="2619:2700" ph="select chat_... rates" />
-            <marker date="1520080895449" expanded="true" signature="2825:2898" ph="update rates... " />
-            <marker date="1520080895449" expanded="true" signature="2831:2879" ph="insert into rates... " />
-            <marker date="1520080895449" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+            <marker date="1520189451326" expanded="true" signature="16:42" ph="insert into states... " />
+            <marker date="1520189451326" expanded="true" signature="100:136" ph="select * fro... states" />
+            <marker date="1520189451326" expanded="true" signature="210:236" ph="update states... " />
+            <marker date="1520189451326" expanded="true" signature="416:575" ph="create table... Messages" />
+            <marker date="1520189451326" expanded="true" signature="656:700" ph="insert into Messages... " />
+            <marker date="1520189451326" expanded="true" signature="781:836" ph="select chat_... Messages" />
+            <marker date="1520189451326" expanded="true" signature="952:1101" ph="create table... answers" />
+            <marker date="1520189451326" expanded="true" signature="1211:1306" ph="insert into answers... " />
+            <marker date="1520189451326" expanded="true" signature="1428:1507" ph="update Messages... " />
+            <marker date="1520189451326" expanded="true" signature="1628:1704" ph="update Messages... " />
+            <marker date="1520189451326" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
+            <marker date="1520189451326" expanded="true" signature="1792:1859" ph="select answe... answers" />
+            <marker date="1520189451326" expanded="true" signature="1984:2065" ph="update answers... " />
+            <marker date="1520189451326" expanded="true" signature="2189:2250" ph="insert into rates... " />
+            <marker date="1520189451326" expanded="true" signature="2373:2469" ph="create table... rates" />
+            <marker date="1520189451326" expanded="true" signature="2619:2700" ph="select chat_... rates" />
+            <marker date="1520189451326" expanded="true" signature="2825:2898" ph="update rates... " />
+            <marker date="1520189451326" expanded="true" signature="2831:2879" ph="insert into rates... " />
+            <marker date="1520189451326" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+            <marker date="1520189451326" expanded="true" signature="3114:3141" ph="select chat_... states" />
           </folding>
         </state>
       </provider>
@@ -577,13 +608,14 @@
         <state relative-caret-position="108">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <marker date="1520081808581" expanded="true" signature="183:278" ph="create table... states" />
-            <marker date="1520081808581" expanded="true" signature="374:401" ph="delete from Messages... " />
-            <marker date="1520081808581" expanded="true" signature="374:404" ph="delete from s... " />
-            <marker date="1520081808581" expanded="true" signature="521:550" ph="delete from answers... " />
-            <marker date="1520081808581" expanded="true" signature="570:592" ph="select * fro... Messages" />
-            <marker date="1520081808581" expanded="true" signature="645:672" ph="delete from states... " />
-            <marker date="1520081808581" expanded="true" signature="777:877" ph="create table... rates" />
+            <marker date="1520188897377" expanded="true" signature="183:278" ph="create table... states" />
+            <marker date="1520188897377" expanded="true" signature="296:318" ph="select * fro... Messages" />
+            <marker date="1520188897377" expanded="true" signature="372:399" ph="delete from Messages... " />
+            <marker date="1520188897377" expanded="true" signature="372:402" ph="delete from s... " />
+            <marker date="1520188897377" expanded="true" signature="519:548" ph="delete from answers... " />
+            <marker date="1520188897377" expanded="true" signature="568:590" ph="select * fro... Messages" />
+            <marker date="1520188897377" expanded="true" signature="645:672" ph="delete from states... " />
+            <marker date="1520188897377" expanded="true" signature="777:877" ph="create table... rates" />
           </folding>
         </state>
       </provider>
@@ -776,24 +808,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="48" column="100" lean-forward="false" selection-start-line="48" selection-start-column="100" selection-end-line="48" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/enum.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -812,85 +826,105 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/states.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        <state relative-caret-position="231">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding>
+            <marker date="1520188897377" expanded="true" signature="183:278" ph="create table... states" />
+            <marker date="1520188897377" expanded="true" signature="296:318" ph="select * fro... Messages" />
+            <marker date="1520188897377" expanded="true" signature="372:399" ph="delete from Messages... " />
+            <marker date="1520188897377" expanded="true" signature="372:402" ph="delete from s... " />
+            <marker date="1520188897377" expanded="true" signature="519:548" ph="delete from answers... " />
+            <marker date="1520188897377" expanded="true" signature="568:590" ph="select * fro... Messages" />
+            <marker date="1520188897377" expanded="true" signature="645:672" ph="delete from states... " />
+            <marker date="1520188897377" expanded="true" signature="777:877" ph="create table... rates" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="95" column="48" lean-forward="false" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="48" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
+    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="149" column="90" lean-forward="false" selection-start-line="149" selection-start-column="90" selection-end-line="149" selection-end-column="90" />
+        <state relative-caret-position="462">
+          <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <marker date="1520080922022" expanded="true" signature="3516:3547" ph="insert into answers... " />
-            <marker date="1520080922022" expanded="true" signature="3516:3558" ph="insert into answers... " />
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/KeyBoards.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="34" column="19" lean-forward="false" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="67" column="20" lean-forward="true" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+          <folding>
+            <marker date="1520082224753" expanded="true" signature="2303:2410" ph="create table... states" />
+            <marker date="1520082224753" expanded="true" signature="2581:2764" ph="create table... Messages" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="366">
+          <caret line="111" column="29" lean-forward="false" selection-start-line="111" selection-start-column="29" selection-end-line="111" selection-end-column="29" />
           <folding>
-            <marker date="1520080895449" expanded="true" signature="16:42" ph="insert into states... " />
-            <marker date="1520080895449" expanded="true" signature="100:136" ph="select * fro... states" />
-            <marker date="1520080895449" expanded="true" signature="210:236" ph="update states... " />
-            <marker date="1520080895449" expanded="true" signature="416:575" ph="create table... Messages" />
-            <marker date="1520080895449" expanded="true" signature="656:700" ph="insert into Messages... " />
-            <marker date="1520080895449" expanded="true" signature="781:836" ph="select chat_... Messages" />
-            <marker date="1520080895449" expanded="true" signature="952:1101" ph="create table... answers" />
-            <marker date="1520080895449" expanded="true" signature="1211:1306" ph="insert into answers... " />
-            <marker date="1520080895449" expanded="true" signature="1428:1507" ph="update Messages... " />
-            <marker date="1520080895449" expanded="true" signature="1628:1704" ph="update Messages... " />
-            <marker date="1520080895449" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
-            <marker date="1520080895449" expanded="true" signature="1792:1859" ph="select answe... answers" />
-            <marker date="1520080895449" expanded="true" signature="1984:2065" ph="update answers... " />
-            <marker date="1520080895449" expanded="true" signature="2189:2250" ph="insert into rates... " />
-            <marker date="1520080895449" expanded="true" signature="2373:2469" ph="create table... rates" />
-            <marker date="1520080895449" expanded="true" signature="2619:2700" ph="select chat_... rates" />
-            <marker date="1520080895449" expanded="true" signature="2825:2898" ph="update rates... " />
-            <marker date="1520080895449" expanded="true" signature="2831:2879" ph="insert into rates... " />
-            <marker date="1520080895449" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+            <marker date="1520189451326" expanded="true" signature="16:42" ph="insert into states... " />
+            <marker date="1520189451326" expanded="true" signature="100:136" ph="select * fro... states" />
+            <marker date="1520189451326" expanded="true" signature="210:236" ph="update states... " />
+            <marker date="1520189451326" expanded="true" signature="416:575" ph="create table... Messages" />
+            <marker date="1520189451326" expanded="true" signature="656:700" ph="insert into Messages... " />
+            <marker date="1520189451326" expanded="true" signature="781:836" ph="select chat_... Messages" />
+            <marker date="1520189451326" expanded="true" signature="952:1101" ph="create table... answers" />
+            <marker date="1520189451326" expanded="true" signature="1211:1306" ph="insert into answers... " />
+            <marker date="1520189451326" expanded="true" signature="1428:1507" ph="update Messages... " />
+            <marker date="1520189451326" expanded="true" signature="1628:1704" ph="update Messages... " />
+            <marker date="1520189451326" expanded="true" signature="1792:1823" ph="select Me fr... answers" />
+            <marker date="1520189451326" expanded="true" signature="1792:1859" ph="select answe... answers" />
+            <marker date="1520189451326" expanded="true" signature="1984:2065" ph="update answers... " />
+            <marker date="1520189451326" expanded="true" signature="2189:2250" ph="insert into rates... " />
+            <marker date="1520189451326" expanded="true" signature="2373:2469" ph="create table... rates" />
+            <marker date="1520189451326" expanded="true" signature="2619:2700" ph="select chat_... rates" />
+            <marker date="1520189451326" expanded="true" signature="2825:2898" ph="update rates... " />
+            <marker date="1520189451326" expanded="true" signature="2831:2879" ph="insert into rates... " />
+            <marker date="1520189451326" expanded="true" signature="2999:3037" ph="select sum(r... rates" />
+            <marker date="1520189451326" expanded="true" signature="3114:3141" ph="select chat_... states" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
+    <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="366">
+          <caret line="168" column="62" lean-forward="false" selection-start-line="168" selection-start-column="62" selection-end-line="168" selection-end-column="62" />
           <folding>
-            <marker date="1520081808581" expanded="true" signature="183:278" ph="create table... states" />
-            <marker date="1520081808581" expanded="true" signature="374:401" ph="delete from Messages... " />
-            <marker date="1520081808581" expanded="true" signature="374:404" ph="delete from s... " />
-            <marker date="1520081808581" expanded="true" signature="521:550" ph="delete from answers... " />
-            <marker date="1520081808581" expanded="true" signature="570:592" ph="select * fro... Messages" />
-            <marker date="1520081808581" expanded="true" signature="645:672" ph="delete from states... " />
-            <marker date="1520081808581" expanded="true" signature="777:877" ph="create table... rates" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="79" column="29" lean-forward="true" selection-start-line="79" selection-start-column="29" selection-end-line="79" selection-end-column="29" />
-          <folding>
-            <marker date="1520082224753" expanded="true" signature="2303:2410" ph="create table... states" />
-            <marker date="1520082224753" expanded="true" signature="2581:2764" ph="create table... Messages" />
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1520189519931" expanded="true" signature="3712:3743" ph="insert into answers... " />
+            <marker date="1520189519931" expanded="true" signature="3712:3754" ph="insert into answers... " />
           </folding>
         </state>
       </provider>

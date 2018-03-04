@@ -8,10 +8,12 @@ state_texts_mapping = {
     State.ADMIN_PANEL: "پنل ادمین",
 
     State.ANSWER_OR_PASS: "خواندن پیامها",
+    State.POLL_RESULT: "نتیجه نظر سنجی",
+    State.ANNOUNCEMENT: "ارسال اطلاعیه",
+
     State.ANSWERING: "answer",
     State.PASS: "pass",
 
-    State.POLL_RESULT: "نتیجه نظر سنجی",
 
     State.POLL_very_happy: "very happy",
     State.POLL_happy: "happy",
@@ -21,13 +23,17 @@ state_texts_mapping = {
 
 
 
-    State.LOCATION: "مکانها" + emojies.get('location'),
+
     State.POLL: "نظرسنجی" + emojies.get('clipboard'),
-    State.SCHEDULE: "برنامه زمان بندی" + emojies.get('calender'),
-    State.NEWS: "اطلاعات و اخبار" + emojies.get('information'),
+    State.INFORMATION: "اطلاعات و راهنمایی ها" + emojies.get('information'),
     State.PHOTOGRAPHY_CONTEST: "مسابقه عکس " + emojies.get('camera'),
     State.CONTACT_US: "ارتباط با ما",
     State.INBOX: "صندوق پیام",
+    State.ONLINE_RESULT: "نتایج آنلاین",
+
+    State.SCHEDULE: "برنامه زمان بندی" + emojies.get('calender'),
+    State.LOCATION: "مکانها" + emojies.get('location'),
+    State.SHARIF_ID: "راهنمای اتصال به VPN شریف",
 
     State.LOCATION_LUNCH: "غذاخوری" + emojies.get('dining_hall'),
     State.LOCATION_JABER: "سالن جابر",
@@ -39,23 +45,6 @@ state_texts_mapping = {
 
 action_texts_mapping = {
     Action.RETURN: "بازگشت"
-}
-
-dispatchers = {
-
-    State.MAIN: main_menu,
-
-    # main menu
-    State.LOCATION: map_loader,
-    State.POLL: poll,
-    State.SCHEDULE: schedule,
-    State.NEWS: news,
-    State.PHOTOGRAPHY_CONTEST: photography_contest,
-
-    # State.LOCATION_JABER: location_jaber,
-    # State.LOCATION_LUNCH: location_lunch,
-    # State.LOCATION_CE_DP: location_ce_dp,
-
 }
 
 
@@ -82,13 +71,12 @@ def dispatch(delegate, msg):
 transitions = {
 
     # main transitions
-    (State.MAIN, state_texts_mapping.get(State.LOCATION)): map_loader,
+    (State.MAIN, state_texts_mapping.get(State.INFORMATION)): information,
     (State.MAIN, state_texts_mapping.get(State.POLL)): poll,
-    (State.MAIN, state_texts_mapping.get(State.SCHEDULE)): schedule,
-    (State.MAIN, state_texts_mapping.get(State.NEWS)): news,
     (State.MAIN, state_texts_mapping.get(State.PHOTOGRAPHY_CONTEST)): photography_contest,
     (State.MAIN, state_texts_mapping.get(State.INBOX)): inbox,
     (State.MAIN, state_texts_mapping.get(State.CONTACT_US)): contact_us,
+
 
     # main transitions for admin
     (State.MAIN, "abrakadabra"): admin_panel,
@@ -97,6 +85,12 @@ transitions = {
     (State.ADMIN_PANEL, action_texts_mapping.get(Action.RETURN)): main_menu,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_OR_PASS)): show_unanswered_messages,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.POLL_RESULT)): poll_result,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.ANNOUNCEMENT)): announcement,
+
+    # admin announcement
+    (State.ANNOUNCEMENT, None): announcing,
+    (State.ANNOUNCEMENT, action_texts_mapping.get(Action.RETURN)):admin_panel,
+
 
     # (State.ANSWER_MESSAGES, ""): show_unanswered_messages,
     (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
@@ -104,6 +98,13 @@ transitions = {
     (State.ANSWER_OR_PASS, state_texts_mapping.get(State.PASS)): pass_message,
     (State.ANSWERING, None): answer_message,
     (State.ANSWERING, action_texts_mapping.get(Action.RETURN)): main_menu,
+
+    # information transitions
+    (State.INFORMATION, state_texts_mapping.get(State.LOCATION)): map_loader,
+    (State.INFORMATION, state_texts_mapping.get(State.SHARIF_ID)): sharif_id,
+    (State.INFORMATION, state_texts_mapping.get(State.SCHEDULE)): schedule,
+    (State.INFORMATION, action_texts_mapping.get(Action.RETURN)): main_menu,
+
 
     # Location transitions
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_JABER)): get_location,

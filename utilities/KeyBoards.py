@@ -7,15 +7,32 @@ from utilities.Texts import *
 
 
 def _main_keyboard():
-    # return ReplyKeyboardMarkup(keyboard=[KeyboardButton(text=keyboard_text) for keyboard_text in
-    # default_buttons_texts])
     temp = list(map(lambda text: KeyboardButton(text=text), main_menu_texts))
     btn_lst = [
         [
             temp[0], temp[1], temp[2]
         ],
         [
-            temp[3], temp[4], temp[5], temp[6]
+            temp[3], temp[4], temp[5]
+        ]
+    ]
+    return ReplyKeyboardMarkup(keyboard=btn_lst)
+
+
+def _information_keyboard():
+    temp = list(map(lambda text: KeyboardButton(text=text), information_menu_button_texts))
+    btn_lst = [
+        [
+            temp[0]
+        ],
+        [
+            temp[1]
+        ],
+        [
+            temp[2]
+        ],
+        [
+            temp[3]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
@@ -46,7 +63,7 @@ def _contact_us_keyboard():
 def _admin_panel_keyboard():
     btn_lst = [
         [
-            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2]
+            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2], admin_panel_buttons_texts[3]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
@@ -90,6 +107,7 @@ def _polling_keyboard():
 
 
 main_keyboard = _main_keyboard()
+information_keyboard = _information_keyboard()
 location_keyboard = _location_default_keyboard()
 contact_us_keyboard = _contact_us_keyboard()
 admin_panel_keyboard = _admin_panel_keyboard()

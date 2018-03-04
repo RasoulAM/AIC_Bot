@@ -8,15 +8,21 @@ class State(Enum):
     ANSWERING = 4
     PASS = 5
     POLL_RESULT = 6
+    ANNOUNCEMENT = 7
+    ANNOUNCING = 8
 
     # main menu
-    LOCATION = 101
+    INFORMATION = 101
     POLL = 102
-    SCHEDULE = 103
-    NEWS = 104
-    PHOTOGRAPHY_CONTEST = 105
-    CONTACT_US = 106
-    INBOX = 107
+    PHOTOGRAPHY_CONTEST = 103
+    CONTACT_US = 104
+    INBOX = 105
+    ONLINE_RESULT = 106
+
+    # information MENU
+    LOCATION = 141
+    SCHEDULE = 142
+    SHARIF_ID = 143
 
     # LOCATION MENU
     LOCATION_CE_DP = 111

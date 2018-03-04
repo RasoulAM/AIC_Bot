@@ -107,3 +107,7 @@ fetch_poll_result = '' \
                     select sum(rate) / count(*) from rates
                     """
 
+fetch_users = '' \
+              """
+              select chat_ids from states
+              """

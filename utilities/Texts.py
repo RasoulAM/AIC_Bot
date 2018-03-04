@@ -7,14 +7,20 @@ db_path1 = os.getcwd() + '/database.db'
 
 
 
-main_menu_texts=[
-    "مکانها" + emojies.get('location'),
+main_menu_texts = [
     "نظرسنجی" + emojies.get('clipboard'),
-    "برنامه زمان بندی" + emojies.get('calender'),
-    "اطلاعات و اخبار" + emojies.get('information'),
+    "اطلاعات و راهنمایی ها" + emojies.get('information'),
     "مسابقه عکس " + emojies.get('camera'),
     "ارتباط با ما",
+    "نتایج آنلاین",
     "صندوق پیام",
+]
+
+information_menu_button_texts = [
+    "برنامه زمان بندی" + emojies.get('calender'),
+    "مکانها" + emojies.get('location'),
+    "راهنمای اتصال به VPN شریف",
+    "بازگشت"
 ]
 
 locations_buttons_texts = [
@@ -29,6 +35,7 @@ locations_buttons_texts = [
 admin_panel_buttons_texts = [
     "خواندن پیامها",
     "نتیجه نظر سنجی",
+    "ارسال اطلاعیه",
     "بازگشت",
 ]
 

@@ -11,6 +11,16 @@ def main_menu(delegate, msg):
     return State.MAIN
 
 
+def information(delegate, msg):
+    delegate.sender.sendMessage(text="اطلاعات و راهنمایی ها:", reply_markup=information_keyboard)
+    return State.INFORMATION
+
+
+def sharif_id(delegate, msg):
+    delegate.sender.sendMessage(text="coming soon...!")
+    return State.INFORMATION
+
+
 def map_loader(delegate, msg):
     delegate.sender.sendMessage(text="مکان مورد نظر خود را انتخاب کنید!", reply_markup=location_keyboard)
     return State.LOCATION
@@ -21,10 +31,6 @@ def poll(delegate, msg):
     delegate.sender.sendMessage(text="نظر خود درباره برگزاری رویداد را انتخاب کنید!", reply_markup=polling_keyboard)
 
     return State.POLL
-
-
-def news(delegate, msg):
-    delegate.sender.sendMessage(text="Coming soon...")
 
 
 def schedule(delegate, msg):
@@ -148,4 +154,17 @@ def polling(delegate, msg):
 def poll_result(delegate, msg):
     result = delegate.query.execute(fetch_poll_result).fetchall()
     delegate.sender.sendMessage(text="نتیجه نظرسنجی تا این لحظه = {0}".format(result[0][0]))
+    return State.ADMIN_PANEL
+
+
+def announcement(delegate, msg):
+    delegate.sender.sendMessage(text="متن اطلاعیه را بنویسید وارسال کنید.")
+    return State.ANNOUNCEMENT
+
+
+def announcing(delegate, msg):
+    users = delegate.query.execute(fetch_users).fetchall()
+    delegate.connection.commit()
+    for i in users:
+        delegate.bott.sendMessage(chat_id=i[0], text=msg["text"])
     return State.ADMIN_PANEL
