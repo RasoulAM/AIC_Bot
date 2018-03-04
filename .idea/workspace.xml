@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57e3c548-c6e4-45d3-b821-a18317e37ff0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AIC_Bot.py" afterPath="$PROJECT_DIR$/AIC_Bot.py" />
-      <change beforePath="$PROJECT_DIR$/DB_initialization.py" afterPath="$PROJECT_DIR$/DB_initialization.py" />
-      <change beforePath="$PROJECT_DIR$/dispatcher.py" afterPath="$PROJECT_DIR$/dispatcher.py" />
-      <change beforePath="$PROJECT_DIR$/functions.py" afterPath="$PROJECT_DIR$/functions.py" />
       <change beforePath="$PROJECT_DIR$/utilities/DB.py" afterPath="$PROJECT_DIR$/utilities/DB.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/KeyBoards.py" afterPath="$PROJECT_DIR$/utilities/KeyBoards.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/Locations.py" afterPath="$PROJECT_DIR$/utilities/Locations.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/Queries.py" afterPath="$PROJECT_DIR$/utilities/Queries.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/Texts.py" afterPath="$PROJECT_DIR$/utilities/Texts.py" />
-      <change beforePath="$PROJECT_DIR$/utilities/states.py" afterPath="$PROJECT_DIR$/utilities/states.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,7 +37,7 @@
       <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
+            <state relative-caret-position="1239">
               <caret line="69" column="64" lean-forward="false" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -58,31 +49,31 @@
       <file leaf-file-name="Locations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Locations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="504">
+              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DB.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utilities/DB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="21">
+              <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
               <folding>
-                <marker date="1520198408306" expanded="true" signature="183:278" ph="create table... states" />
-                <marker date="1520198408306" expanded="true" signature="298:316" ph="drop table a... " />
-                <marker date="1520198408306" expanded="true" signature="308:309" ph="select * fro... Messages" />
-                <marker date="1520198408306" expanded="true" signature="371:398" ph="delete from Messages... " />
-                <marker date="1520198408306" expanded="true" signature="371:401" ph="delete from s... " />
-                <marker date="1520198408306" expanded="true" signature="518:547" ph="delete from answers... " />
-                <marker date="1520198408306" expanded="true" signature="565:584" ph="drop table M... " />
-                <marker date="1520198408306" expanded="true" signature="639:666" ph="delete from states... " />
-                <marker date="1520198408306" expanded="true" signature="777:1039" ph="create table... Messages" />
-                <marker date="1520198408306" expanded="true" signature="1146:1246" ph="create table... rates" />
-                <marker date="1520198408306" expanded="true" signature="1635:1652" ph="drop table s... " />
-                <marker date="1520198408306" expanded="true" signature="1765:1918" ph="create table... states" />
+                <marker date="1520201257694" expanded="true" signature="173:268" ph="create table... states" />
+                <marker date="1520201257694" expanded="true" signature="288:306" ph="drop table a... " />
+                <marker date="1520201257694" expanded="true" signature="298:299" ph="select * fro... Messages" />
+                <marker date="1520201257694" expanded="true" signature="361:388" ph="delete from Messages... " />
+                <marker date="1520201257694" expanded="true" signature="361:391" ph="delete from s... " />
+                <marker date="1520201257694" expanded="true" signature="508:537" ph="delete from answers... " />
+                <marker date="1520201257694" expanded="true" signature="555:574" ph="drop table M... " />
+                <marker date="1520201257694" expanded="true" signature="629:656" ph="delete from states... " />
+                <marker date="1520201257694" expanded="true" signature="787:1049" ph="create table... Messages" />
+                <marker date="1520201257694" expanded="true" signature="1156:1256" ph="create table... rates" />
+                <marker date="1520201257694" expanded="true" signature="1665:1682" ph="drop table s... " />
+                <marker date="1520201257694" expanded="true" signature="1815:1968" ph="create table... states" />
               </folding>
             </state>
           </provider>
@@ -91,8 +82,8 @@
       <file leaf-file-name="DB_initialization.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DB_initialization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="420">
+              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
                 <marker date="1520198408405" expanded="true" signature="218:375" ph="create table... states" />
@@ -108,7 +99,7 @@
       <file leaf-file-name="dispatcher.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dispatcher.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="1659">
               <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -117,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -132,7 +123,7 @@
       <file leaf-file-name="Queries.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="903">
               <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
               <folding>
                 <marker date="1520199446882" expanded="true" signature="16:42" ph="insert into states... " />
@@ -166,7 +157,7 @@
       <file leaf-file-name="enum.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/enum.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="11382">
               <caret line="545" column="0" lean-forward="false" selection-start-line="545" selection-start-column="0" selection-end-line="545" selection-end-column="0" />
               <folding />
             </state>
@@ -176,7 +167,7 @@
       <file leaf-file-name="states.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/states.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="651">
               <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
               <folding />
             </state>
@@ -186,8 +177,8 @@
       <file leaf-file-name="Texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="39" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -225,7 +216,6 @@
         <option value="$PROJECT_DIR$/utilities/Emojies_table.py" />
         <option value="$PROJECT_DIR$/utilities/Locations.py" />
         <option value="$PROJECT_DIR$/DB_initialization.py" />
-        <option value="$PROJECT_DIR$/utilities/DB.py" />
         <option value="$PROJECT_DIR$/utilities/KeyBoards.py" />
         <option value="$PROJECT_DIR$/utilities/Queries.py" />
         <option value="$PROJECT_DIR$/utilities/states.py" />
@@ -233,6 +223,7 @@
         <option value="$PROJECT_DIR$/AIC_Bot.py" />
         <option value="$PROJECT_DIR$/dispatcher.py" />
         <option value="$PROJECT_DIR$/functions.py" />
+        <option value="$PROJECT_DIR$/utilities/DB.py" />
       </list>
     </option>
   </component>
@@ -281,8 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -299,6 +288,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -507,7 +498,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520195360249</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="major changes">
+      <created>1520200573880</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1520200573881</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -527,12 +525,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32842582" sideWeight="0.50590765" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22989808" sideWeight="0.49409238" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32616082" sideWeight="0.48925886" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32616082" sideWeight="0.48925886" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21052632" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21374866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.49270833" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -542,6 +539,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32912844" sideWeight="0.49270833" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -564,7 +562,8 @@
     <MESSAGE value="announcement and information gathering" />
     <MESSAGE value="DB initialization" />
     <MESSAGE value="comment fault" />
-    <option name="LAST_COMMIT_MESSAGE" value="comment fault" />
+    <MESSAGE value="major changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="major changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -576,18 +575,18 @@
         <state relative-caret-position="84">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <marker date="1520198408306" expanded="true" signature="183:278" ph="create table... states" />
-            <marker date="1520198408306" expanded="true" signature="298:316" ph="drop table a... " />
-            <marker date="1520198408306" expanded="true" signature="308:309" ph="select * fro... Messages" />
-            <marker date="1520198408306" expanded="true" signature="371:398" ph="delete from Messages... " />
-            <marker date="1520198408306" expanded="true" signature="371:401" ph="delete from s... " />
-            <marker date="1520198408306" expanded="true" signature="518:547" ph="delete from answers... " />
-            <marker date="1520198408306" expanded="true" signature="565:584" ph="drop table M... " />
-            <marker date="1520198408306" expanded="true" signature="639:666" ph="delete from states... " />
-            <marker date="1520198408306" expanded="true" signature="777:1039" ph="create table... Messages" />
-            <marker date="1520198408306" expanded="true" signature="1146:1246" ph="create table... rates" />
-            <marker date="1520198408306" expanded="true" signature="1635:1652" ph="drop table s... " />
-            <marker date="1520198408306" expanded="true" signature="1765:1918" ph="create table... states" />
+            <marker date="1520201257694" expanded="true" signature="173:268" ph="create table... states" />
+            <marker date="1520201257694" expanded="true" signature="288:306" ph="drop table a... " />
+            <marker date="1520201257694" expanded="true" signature="298:299" ph="select * fro... Messages" />
+            <marker date="1520201257694" expanded="true" signature="361:388" ph="delete from Messages... " />
+            <marker date="1520201257694" expanded="true" signature="361:391" ph="delete from s... " />
+            <marker date="1520201257694" expanded="true" signature="508:537" ph="delete from answers... " />
+            <marker date="1520201257694" expanded="true" signature="555:574" ph="drop table M... " />
+            <marker date="1520201257694" expanded="true" signature="629:656" ph="delete from states... " />
+            <marker date="1520201257694" expanded="true" signature="787:1049" ph="create table... Messages" />
+            <marker date="1520201257694" expanded="true" signature="1156:1256" ph="create table... rates" />
+            <marker date="1520201257694" expanded="true" signature="1665:1682" ph="drop table s... " />
+            <marker date="1520201257694" expanded="true" signature="1815:1968" ph="create table... states" />
           </folding>
         </state>
       </provider>
@@ -668,18 +667,18 @@
         <state relative-caret-position="108">
           <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
-            <marker date="1520198408306" expanded="true" signature="183:278" ph="create table... states" />
-            <marker date="1520198408306" expanded="true" signature="298:316" ph="drop table a... " />
-            <marker date="1520198408306" expanded="true" signature="308:309" ph="select * fro... Messages" />
-            <marker date="1520198408306" expanded="true" signature="371:398" ph="delete from Messages... " />
-            <marker date="1520198408306" expanded="true" signature="371:401" ph="delete from s... " />
-            <marker date="1520198408306" expanded="true" signature="518:547" ph="delete from answers... " />
-            <marker date="1520198408306" expanded="true" signature="565:584" ph="drop table M... " />
-            <marker date="1520198408306" expanded="true" signature="639:666" ph="delete from states... " />
-            <marker date="1520198408306" expanded="true" signature="777:1039" ph="create table... Messages" />
-            <marker date="1520198408306" expanded="true" signature="1146:1246" ph="create table... rates" />
-            <marker date="1520198408306" expanded="true" signature="1635:1652" ph="drop table s... " />
-            <marker date="1520198408306" expanded="true" signature="1765:1918" ph="create table... states" />
+            <marker date="1520201257694" expanded="true" signature="173:268" ph="create table... states" />
+            <marker date="1520201257694" expanded="true" signature="288:306" ph="drop table a... " />
+            <marker date="1520201257694" expanded="true" signature="298:299" ph="select * fro... Messages" />
+            <marker date="1520201257694" expanded="true" signature="361:388" ph="delete from Messages... " />
+            <marker date="1520201257694" expanded="true" signature="361:391" ph="delete from s... " />
+            <marker date="1520201257694" expanded="true" signature="508:537" ph="delete from answers... " />
+            <marker date="1520201257694" expanded="true" signature="555:574" ph="drop table M... " />
+            <marker date="1520201257694" expanded="true" signature="629:656" ph="delete from states... " />
+            <marker date="1520201257694" expanded="true" signature="787:1049" ph="create table... Messages" />
+            <marker date="1520201257694" expanded="true" signature="1156:1256" ph="create table... rates" />
+            <marker date="1520201257694" expanded="true" signature="1665:1682" ph="drop table s... " />
+            <marker date="1520201257694" expanded="true" signature="1815:1968" ph="create table... states" />
           </folding>
         </state>
       </provider>
@@ -873,13 +872,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="4751" column="8" lean-forward="false" selection-start-line="4751" selection-start-column="8" selection-end-line="4751" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/enum.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="11382">
           <caret line="545" column="0" lean-forward="false" selection-start-line="545" selection-start-column="0" selection-end-line="545" selection-end-column="0" />
           <folding />
         </state>
@@ -887,8 +885,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DB_initialization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        <state relative-caret-position="420">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
             <marker date="1520198408405" expanded="true" signature="218:375" ph="create table... states" />
@@ -902,7 +900,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Queries.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="903">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <marker date="1520199446882" expanded="true" signature="16:42" ph="insert into states... " />
@@ -934,54 +932,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Locations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="504">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/states.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="651">
           <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <marker date="1520198408306" expanded="true" signature="183:278" ph="create table... states" />
-            <marker date="1520198408306" expanded="true" signature="298:316" ph="drop table a... " />
-            <marker date="1520198408306" expanded="true" signature="308:309" ph="select * fro... Messages" />
-            <marker date="1520198408306" expanded="true" signature="371:398" ph="delete from Messages... " />
-            <marker date="1520198408306" expanded="true" signature="371:401" ph="delete from s... " />
-            <marker date="1520198408306" expanded="true" signature="518:547" ph="delete from answers... " />
-            <marker date="1520198408306" expanded="true" signature="565:584" ph="drop table M... " />
-            <marker date="1520198408306" expanded="true" signature="639:666" ph="delete from states... " />
-            <marker date="1520198408306" expanded="true" signature="777:1039" ph="create table... Messages" />
-            <marker date="1520198408306" expanded="true" signature="1146:1246" ph="create table... rates" />
-            <marker date="1520198408306" expanded="true" signature="1635:1652" ph="drop table s... " />
-            <marker date="1520198408306" expanded="true" signature="1765:1918" ph="create table... states" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
+        <state relative-caret-position="1239">
           <caret line="69" column="64" lean-forward="false" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -991,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dispatcher.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
+        <state relative-caret-position="1659">
           <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -1005,6 +972,37 @@
           <caret line="83" column="60" lean-forward="false" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="39" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/DB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+          <folding>
+            <marker date="1520201257694" expanded="true" signature="173:268" ph="create table... states" />
+            <marker date="1520201257694" expanded="true" signature="288:306" ph="drop table a... " />
+            <marker date="1520201257694" expanded="true" signature="298:299" ph="select * fro... Messages" />
+            <marker date="1520201257694" expanded="true" signature="361:388" ph="delete from Messages... " />
+            <marker date="1520201257694" expanded="true" signature="361:391" ph="delete from s... " />
+            <marker date="1520201257694" expanded="true" signature="508:537" ph="delete from answers... " />
+            <marker date="1520201257694" expanded="true" signature="555:574" ph="drop table M... " />
+            <marker date="1520201257694" expanded="true" signature="629:656" ph="delete from states... " />
+            <marker date="1520201257694" expanded="true" signature="787:1049" ph="create table... Messages" />
+            <marker date="1520201257694" expanded="true" signature="1156:1256" ph="create table... rates" />
+            <marker date="1520201257694" expanded="true" signature="1665:1682" ph="drop table s... " />
+            <marker date="1520201257694" expanded="true" signature="1815:1968" ph="create table... states" />
           </folding>
         </state>
       </provider>

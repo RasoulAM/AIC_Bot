@@ -1,9 +1,8 @@
 import sqlite3
 import os
-from utilities.Texts import *
 from utilities.Queries import *
 
-con = sqlite3.connect(db_path1, check_same_thread=False)
+con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 # query.execute("create table states"
 #               "(chat_ids int primary key, "
@@ -23,7 +22,7 @@ query.execute("drop table Messages")
 
 # query.execute("delete from rates where 1=1")
 con.commit()
-con = sqlite3.connect(db_path1, check_same_thread=False)
+con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 query.execute("""create table Messages(
                         chat_id int,
@@ -48,11 +47,11 @@ con.commit()
 #                             is_read int);
 #                             """)
 # con.commit()
-con = sqlite3.connect(db_path1, check_same_thread=False)
+con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 query.execute("""drop table states""")
 con.commit()
-con = sqlite3.connect(db_path1, check_same_thread=False)
+con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 query.execute("""create table states(
                         chat_ids int PRIMARY KEY,
