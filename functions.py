@@ -65,7 +65,7 @@ def contact_us(delegate, msg):
 
 
 def send_message_to_admin(delegate, msg):
-    query_text = send_message_text + str(delegate.chat_id) + ',\'' + msg["text"] + '\',' + str(0) + ',' + str(0) + ")"
+    query_text = send_message_text.format(delegate.chat_id, msg["from"]["first_name"], msg["message_id"], msg["text"], 0, 0)
     print(query_text)
     delegate.query.execute(query_text)
 
@@ -80,8 +80,13 @@ def get_location(delegate, msg):
 
 
 def admin_panel(delegate, msg):
-    delegate.sender.sendMessage(text="Welcome to the admin panel!", reply_markup=admin_panel_keyboard)
-    return State.ADMIN_PANEL
+    if delegate.chat_id in admin_chat_id:
+        delegate.sender.sendMessage(text="Access Granted!\nWelcome to the admin panel", reply_markup=admin_panel_keyboard)
+        return State.ADMIN_PANEL
+    else:
+        delegate.sender.sendMessage(text="Unauthorized Access!")
+        return State.MAIN
+
 
 
 def show_unanswered_messages(delegate, msg):
@@ -91,7 +96,7 @@ def show_unanswered_messages(delegate, msg):
         delegate.sender.sendMessage(text="No unread messages!")
         return State.ADMIN_PANEL
     else:
-        delegate.sender.sendMessage('{0}'.format(messages[0][1]), reply_markup=admin_read_message_keyboard)
+        delegate.sender.sendMessage('{0} says:\n{1}'.format(messages[0][1], messages[0][2]), reply_markup=admin_read_message_keyboard)
         delegate.answer_to = messages[0][0]
     answering_message = messages[0]
     # delegate.sender.sendMessage(text=answering_message[1])
@@ -105,9 +110,7 @@ def to_answer(delegate, msg):
 
 
 def answer_message(delegate, msg):
-    # print(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', 0))
     delegate.query.execute(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', 0))
-    # delegate.query.execute("insert into answers values(123, 'سلام', 0)")
     delegate.connection.commit()
     delegate.query.execute(update_message_is_answered_status1.format(delegate.answer_to))
     delegate.connection.commit()
@@ -115,7 +118,7 @@ def answer_message(delegate, msg):
     delegate.connection.commit()
     print(delegate.answer_to)
     delegate.bott.sendMessage(chat_id=delegate.answer_to, text="پاسخی برای شما ارسال شده")
-    delegate.sender.sendMessage(text="Your answer will be written in the database...", reply_markup=admin_panel_keyboard)
+    delegate.sender.sendMessage(text="Done!", reply_markup=admin_panel_keyboard)
 
     return State.ADMIN_PANEL
 

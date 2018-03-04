@@ -1,4 +1,4 @@
-insert_state = "insert into states VALUES("
+insert_state = "insert into states VALUES({0}, \'{1}\', {2})"
 
 
 fetch_user = '' \
@@ -6,15 +6,11 @@ fetch_user = '' \
                 select * from states WHERE chat_ids=
                 """
 
-update_state1= '' \
+update_state =  '' \
               """
-              update states set states = 
+              update states set state = {0}
+              where chat_ids = {1}
               """
-
-update_state2 = '' \
-                """
-                where chat_ids = 
-                """
 
 messages_create_table = '' \
                """
@@ -29,12 +25,12 @@ messages_create_table = '' \
 send_message_text = '' \
                """
                insert into Messages
-               VALUES (
+               VALUES ({0}, \'{1}\', {2}, \'{3}\', {4}, {5})
                """
 
 fetch_messages = '' \
                  """
-                 select chat_id, Message from Messages where is_read = 0
+                 select chat_id, first_name, Message from Messages where is_read = 0
                  """
 
 create_answer_table_query = '' \

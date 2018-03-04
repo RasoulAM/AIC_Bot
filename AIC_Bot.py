@@ -25,20 +25,21 @@ class StateHandler(telepot.helper.ChatHandler):
         self.connection.commit()
         self.existed_before = False
         self.answer_to = None
+        self.first_name = None
         self.bott = bot
         if id_in_database:
-            self.state = State(id_in_database[0][1])
+            self.state = State(id_in_database[0][2])
             self.existed_before = True
         if not self.existed_before:
             self.state = State.MAIN
             self.sender.sendMessage(text="First time user detected!!", reply_markup=main_keyboard)
         else:
-            self.state = State(id_in_database[0][1])
+            self.state = State(id_in_database[0][2])
         print("Initialization of connection finished. State: " + str(self.state.value))
 
     def on_chat_message(self, msg):
         pprint(msg)
-
+        self.first_name = msg["from"]["first_name"]
         # By writing "state", the state will be shown
         if msg["text"] is None:
             return
@@ -54,9 +55,9 @@ class StateHandler(telepot.helper.ChatHandler):
 
     def on_close(self, msg):
         if self.existed_before:
-            query = (update_state1 + str(self.state.value) + update_state2 + str(self.chat_id))
+            query = update_state.format(self.state.value, self.chat_id)
         else:
-            query = insert_state + str(self.chat_id) + "," + str(self.state.value) + ')'
+            query = insert_state.format(self.chat_id, self.first_name, self.state.value)
         self.query.execute(query)
         self.connection.commit()
         print("Timed out connection at state: " + str(self.state.value))
@@ -66,7 +67,7 @@ if __name__ == '__main__':
     bot = telepot.DelegatorBot(TOKEN, [
         include_callback_query_chat_id(
             pave_event_space())(
-            per_chat_id(), create_open, StateHandler, timeout=40),
+            per_chat_id(), create_open, StateHandler, timeout=400),
     ])
 
     MessageLoop(bot).run_forever()

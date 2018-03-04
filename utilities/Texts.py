@@ -25,7 +25,6 @@ information_menu_button_texts = [
 
 locations_buttons_texts = [
     "غذاخوری" + emojies.get('dining_hall'),
-    "سالن جابر",
     "دانشکده کامپیوتر",
     "مسجد",
     "آمفی تئاتر مرکزی",
@@ -58,6 +57,11 @@ polling_button_texts = [
     emojies.get("poker"),
     emojies.get("angry"),
     emojies.get("very angry")
+]
+
+admin_chat_id = [
+    105566991,
+    123375596,
 ]
 
 

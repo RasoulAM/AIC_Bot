@@ -22,10 +22,8 @@ def get_location(msg_text):  # latitude, longitude
 
 locations = {
     locations_buttons_texts[0]: [35.703028440307705, 51.351864427319924],
-    locations_buttons_texts[1]: [35.70461974064782, 51.34968727827072],
-    locations_buttons_texts[2]: [35, 51],
-    locations_buttons_texts[3]: [35, 51],
-    locations_buttons_texts[4]: [35, 51],
-
+    locations_buttons_texts[1]: [35.702551248781106, 51.35106392212231],
+    locations_buttons_texts[2]: [35.7005619273472, 51.35151922702789],
+    locations_buttons_texts[3]: [35.70070084508762, 51.35237616344489],
 }
 

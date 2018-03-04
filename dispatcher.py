@@ -38,6 +38,8 @@ state_texts_mapping = {
     State.LOCATION_LUNCH: "غذاخوری" + emojies.get('dining_hall'),
     State.LOCATION_JABER: "سالن جابر",
     State.LOCATION_CE_DP: "دانشکده کامپیوتر",
+    State.LOCATION_MOSQUE: "مسجد",
+    State.LOCATION_THEATER: "آمفی تئاتر مرکزی",
 
 
 
@@ -79,7 +81,7 @@ transitions = {
 
 
     # main transitions for admin
-    (State.MAIN, "abrakadabra"): admin_panel,
+    (State.MAIN, "admin"): admin_panel,
 
     # admin panel transitions
     (State.ADMIN_PANEL, action_texts_mapping.get(Action.RETURN)): main_menu,
@@ -110,7 +112,9 @@ transitions = {
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_JABER)): get_location,
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_CE_DP)): get_location,
     (State.LOCATION, state_texts_mapping.get(State.LOCATION_LUNCH)): get_location,
-    (State.LOCATION, action_texts_mapping.get(Action.RETURN)): main_menu,
+    (State.LOCATION, state_texts_mapping.get(State.LOCATION_MOSQUE)): get_location,
+    (State.LOCATION, state_texts_mapping.get(State.LOCATION_THEATER)): get_location,
+    (State.LOCATION, action_texts_mapping.get(Action.RETURN)): information,
 
     (State.CONTACT_US, None): send_message_to_admin,
     (State.CONTACT_US, action_texts_mapping.get(Action.RETURN)): main_menu,

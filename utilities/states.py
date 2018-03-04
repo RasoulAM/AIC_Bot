@@ -28,6 +28,8 @@ class State(Enum):
     LOCATION_CE_DP = 111
     LOCATION_LUNCH = 112
     LOCATION_JABER = 113
+    LOCATION_MOSQUE = 114
+    LOCATION_THEATER = 115
 
     # schedules
     SCHEDULE_DAY1 = 121
