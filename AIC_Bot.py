@@ -63,35 +63,35 @@ class StateHandler(telepot.helper.ChatHandler):
 
 
 if __name__ == '__main__':
-    # try:
-    #     connection = sqlite3.connect(db_path, check_same_thread=False)
-    #     query = connection.cursor()
-    #     query.execute("create table states"
-    #                 "(chat_ids int primary key, "
-    #                 "states int)")
-    #     connection.commit()
-    #     connection = sqlite3.connect(db_path, check_same_thread=False)
-    #     query = connection.cursor()
-    #     query.execute("""create table Messages(
-    #                     chat_id int,
-    #                     Message text,
-    #                     is_read int,
-    #                     is_answered int)""")
-    #     connection.commit()
-    #     connection = sqlite3.connect(db_path, check_same_thread=False)
-    #     query = connection.cursor()
-    #     query.execute("create table states"
-    #                   "(chat_ids int primary key, "
-    #                   "states int)")
-    #     connection.commit()
-    #     connection = sqlite3.connect(db_path, check_same_thread=False)
-    #     query = connection.cursor()
-    #     query.execute("create table states"
-    #                   "(chat_ids int primary key, "
-    #                   "states int)")
-    #     connection.commit()
-    # except exception:
-    #     print(exception)
+    try:
+        connection = sqlite3.connect(db_path, check_same_thread=False)
+        query = connection.cursor()
+        query.execute("create table states"
+                    "(chat_ids int primary key, "
+                    "states int)")
+        connection.commit()
+        connection = sqlite3.connect(db_path, check_same_thread=False)
+        query = connection.cursor()
+        query.execute("""create table Messages(
+                        chat_id int,
+                        Message text,
+                        is_read int,
+                        is_answered int)""")
+        connection.commit()
+        connection = sqlite3.connect(db_path, check_same_thread=False)
+        query = connection.cursor()
+        query.execute("create table states"
+                      "(chat_ids int primary key, "
+                      "states int)")
+        connection.commit()
+        connection = sqlite3.connect(db_path, check_same_thread=False)
+        query = connection.cursor()
+        query.execute("create table states"
+                      "(chat_ids int primary key, "
+                      "states int)")
+        connection.commit()
+    except exception:
+        print(exception)
     # finally:
     bot = telepot.DelegatorBot(TOKEN, [
         include_callback_query_chat_id(

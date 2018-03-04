@@ -8,7 +8,8 @@ query = con.cursor()
 # query.execute("create table states"
 #               "(chat_ids int primary key, "
 #               "states int)")
-query.execute("select * from Messages")
+# query.execute("drop table answers")
+
 # a = query.fetchall()
 # print(a)
 # query.execute("delete from Messages where 1=1")
@@ -16,9 +17,9 @@ query.execute("select * from Messages")
 # con = sqlite3.connect(db_path1, check_same_thread=False)
 # query = con.cursor()
 # query.execute("delete from answers where 1=1")
-# query.execute("select * from Messages")
-# a = query.fetchall()
-# print(a)
+query.execute("select * from Messages")
+a = query.fetchall()
+print(a)
 
 # query.execute("delete from rates where 1=1")
 con.commit()
