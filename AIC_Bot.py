@@ -10,8 +10,8 @@ from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
 
-# TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
-TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
+TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
+# TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
 chat_ids = telepot.helper.SafeDict()
 
@@ -25,6 +25,7 @@ class StateHandler(telepot.helper.ChatHandler):
         print(fetch_user.format(self.chat_id))
         print(id_in_database)
         self.connection.commit()
+        self.question_id = 0
         self.existed_before = False
         self.answer_to = None
         self.first_name = None
@@ -42,7 +43,7 @@ class StateHandler(telepot.helper.ChatHandler):
 
     def on_chat_message(self, msg):
         try:
-            with open("log.txt", "a") as f:
+            with open("log.txt", "a", encoding="utf-8") as f:
                 f.write(str(msg) + '\n')
             pprint(msg)
             self.first_name = msg["from"]["first_name"]
@@ -54,20 +55,19 @@ class StateHandler(telepot.helper.ChatHandler):
                 return
 
             dispatcher.dispatch(self, msg)
-        except exception:
+        except Exception:
             with open("errlog.txt","a") as f:
-                f.write(str(exception) + '\n')
-
+                f.write(Exception.__str__() + '\n')
 
     def on_callback_query(self, msg):
         try:
-            with open("log.txt", "a") as f:
+            with open("log.txt", "a", encoding="utf-8") as f:
                 f.write(str(msg) + '\n')
             pprint(msg)
             dispatcher.dispatch(self, msg)
-        except exception:
+        except Exception:
             with open("errlog.txt","a") as f:
-                f.write(str(exception) + '\n')
+                f.write(Exception.__str__() + '\n')
 
     def on_close(self, msg):
         try:
@@ -78,9 +78,9 @@ class StateHandler(telepot.helper.ChatHandler):
             self.query.execute(query)
             self.connection.commit()
             print("Timed out connection at state: " + str(self.state.value))
-        except exception:
-            with open("errlog.txt","a") as f:
-                f.write(str(exception) + '\n')
+        except Exception:
+            with open("errlog.txt","a", encoding="urf-8") as f:
+                f.write(Exception.__str__() + '\n')
 
 
 if __name__ == '__main__':

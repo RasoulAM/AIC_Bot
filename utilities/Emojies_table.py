@@ -11,5 +11,7 @@ emojies = {
     'poker': u'\U0001f610',
     'happy': u'\U0001f60a',
     'very happy': u'\U0001f603',
+    'like': u'\U0001f44d',
+    'dislike': u'\U0001f44e',
 
 }

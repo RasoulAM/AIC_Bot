@@ -26,7 +26,9 @@ if __name__ == '__main__':
                                """
                                create table rates(
                                chat_id int,
-                               rate int)
+                               rate FLOAT,
+                               question_id int
+                                )
                                """)
         connection.commit()
         connection = sqlite3.connect(db_path, check_same_thread=False)
@@ -41,5 +43,25 @@ if __name__ == '__main__':
                         );
                         """)
         connection.commit()
-    except:
+        connection = sqlite3.connect(db_path, check_same_thread=False)
+        query = connection.cursor()
+        query.execute('' \
+                        """
+                        create table photo_ids(
+                        photo_id text,
+                        );
+                        """)
+        connection.commit()
+        connection = sqlite3.connect(db_path, check_same_thread=False)
+        query = connection.cursor()
+        query.execute('' \
+                      """
+                      create table photo_contest_result(
+                      photo_id text,
+                      likes_num int,
+                      dislikes_num int
+                      );
+                      """)
+        connection.commit()
+    except Exception:
             print("Error!")

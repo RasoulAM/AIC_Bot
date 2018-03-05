@@ -80,9 +80,13 @@ import os
 # con.commit()
 con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
-query.execute('' \
-                        """
-                        drop table answers
-                        """)
+query.execute(''\
+                    """
+                      create table photo_contest_result(
+                      photo_id text,
+                      likes_num int,
+                      dislikes_num int
+                      );
+                      """)
 con.commit()
 

@@ -10,6 +10,8 @@ class State(Enum):
     POLL_RESULT = 6
     ANNOUNCEMENT = 7
     ANNOUNCING = 8
+    ADD_PHOTO = 9
+    ADDING_PHOTO = 10
 
     # main menu
     INFORMATION = 101

@@ -10,7 +10,7 @@ state_texts_mapping = {
     State.ANSWER_OR_PASS: "خواندن پیامها",
     State.POLL_RESULT: "نتیجه نظر سنجی",
     State.ANNOUNCEMENT: "ارسال اطلاعیه",
-
+    State.ADD_PHOTO: "اضافه کردن عکس",
     State.ANSWERING: "answer",
     State.PASS: "pass",
 
@@ -95,11 +95,14 @@ transitions = {
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_OR_PASS)): show_unanswered_messages,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.POLL_RESULT)): poll_result,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ANNOUNCEMENT)): announcement,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.ADD_PHOTO)): add_photo,
 
     # admin announcement
     (State.ANNOUNCEMENT, None): announcing,
     (State.ANNOUNCEMENT, action_texts_mapping.get(Action.RETURN)):admin_panel,
 
+    # admin ad photo
+    (State.ADD_PHOTO, None): adding_photo,
 
     # (State.ANSWER_MESSAGES, ""): show_unanswered_messages,
     (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
@@ -140,6 +143,6 @@ transitions = {
     (State.POLL, state_texts_mapping.get(State.POLL_poker)): polling,
     (State.POLL, state_texts_mapping.get(State.POLL_angry)): polling,
     (State.POLL, state_texts_mapping.get(State.POLL_very_angry)): polling,
-    (State.POLL, action_texts_mapping.get(Action.RETURN)):main_menu,
+    (State.POLL, action_texts_mapping.get(Action.RETURN)): main_menu,
 
 }

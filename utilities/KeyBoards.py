@@ -64,7 +64,7 @@ def _admin_panel_keyboard():
     btn_lst = [
         [
             admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2],
-            admin_panel_buttons_texts[3]
+            admin_panel_buttons_texts[3], admin_panel_buttons_texts[4],
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
@@ -115,6 +115,14 @@ def _polling_keyboard():
     return btn_lst
 
 
+def _like_dislike_keyboard():
+    btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
+        InlineKeyboardButton(text=like_dislike_texts[0], callback_data='like'),
+        InlineKeyboardButton(text=like_dislike_texts[1], callback_data='dislike'),
+    ]])
+    return btn_lst
+
+
 def _platform_keyboard():
     btn_lst = [
         [
@@ -142,3 +150,4 @@ admin_read_message_keyboard = _admin_read_message_keyboard()
 only_return_keyboard = _only_return_keyboard()
 polling_keyboard = _polling_keyboard()
 platform_keyboard = _platform_keyboard()
+like_dislike_keyboard = _like_dislike_keyboard()

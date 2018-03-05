@@ -74,7 +74,7 @@ update_answer_is_read_status = '' \
 insert_into_rates_query = '' \
                           """
                           insert into rates
-                          VALUES ({0}, {1})
+                          VALUES ({0}, {1}, {2})
                           """
 
 
@@ -88,22 +88,47 @@ create_rates_table_query = '' \
 check_update_or_insert_rate_query = '' \
                                     """
                                     select chat_id from rates
-                                    where chat_id = {0}
+                                    where chat_id = {0} and question_id = {1}
                                     """
 
 
 update_rates_query = '' \
                           """
                           update rates set rate = {0}
-                          where chat_id = {1}
+                          where chat_id = {1} and question_id = {2}
                           """
 
 fetch_poll_result = '' \
                     """
                     select sum(rate) / count(*) from rates
+                    group BY question_id
                     """
 
 fetch_users = '' \
               """
               select chat_ids from states
               """
+
+
+fetch_rates_num = '' \
+                  """
+                  select count(*) from rates
+                  GROUP BY question_id
+                  """
+
+insert_photo_id = '' \
+                  """
+                  insert into photo_ids
+                  VALUES (\'{0}\')
+                  """
+
+fetch_photo_nums = '' \
+                   """
+                   select * from photo_ids
+                   """
+
+check_update_or_insert_rate_query = '' \
+                                    """
+                                    select photo_id from photo_ids
+                                    where chat_id = {0} and question_id = {1}
+                                    """

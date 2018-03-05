@@ -3,6 +3,7 @@ from utilities.Locations import *
 from utilities.states import *
 from utilities.Queries import *
 from utilities.media import *
+from utilities.Texts import *
 
 
 def main_menu(delegate, msg):
@@ -33,9 +34,10 @@ def map_loader(delegate, msg):
 
 
 def poll(delegate, msg):
+    delegate.question_id = 0
     delegate.sender.sendMessage(text="نظر سنجی:", reply_markup=contact_us_keyboard)
-    delegate.sender.sendMessage(text="نظر خود درباره برگزاری رویداد را انتخاب کنید!", reply_markup=polling_keyboard)
-
+    delegate.sender.sendMessage(text=questions[delegate.question_id], reply_markup=polling_keyboard)
+    delegate.question_id += 1
     return State.POLL
 
 
@@ -50,8 +52,23 @@ def show_schedule(delegate, msg):
 
 
 def photography_contest(delegate, msg):
-    delegate.sender.sendMessage(text="Coming soon...")
-    return State.MAIN
+    photos = delegate.query.execute(fetch_photo_nums).fetchall()
+    if len(photos) == 0:
+        delegate.sender.sendMessage("عکسی موجود نیست")
+        return State.MAIN
+    else:
+        delegate.sender.sendPhoto(photo=photos[delegate.photo_id], reply_markup=like_dislike_keyboard)
+    return State.PHOTOGRAPHY_CONTEST
+
+
+def photography_contesting(delegate, msg):
+    photos = delegate.query.execute(fetch_photo_nums).fetchall()
+    if len(photos) == 0:
+        delegate.sender.sendMessage("عکسی موجود نیست")
+        return State.MAIN
+    elif delegate.photonum < len(photos):
+        delegate.sender.sendPhoto(photo=photos[delegate.photo_id], reply_markup=like_dislike_keyboard)
+    return State.PHOTOGRAPHY_CONTEST
 
 
 def inbox(delegate, msg):
@@ -142,32 +159,57 @@ def pass_message(delegate, msg):
 
 
 def polling(delegate, msg):
-    rate = 0
-    if msg["data"] == "very happy":
-        rate = 5
-    elif msg["data"] == "happy":
-        rate = 4
-    elif msg["data"] == "poker":
-        rate = 3
-    elif msg["data"] == "angry":
-        rate = 2
-    elif msg["data"] == "very angry":
-        rate = 1
-    is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id)).fetchall()
-    print(is_there)
-    delegate.connection.commit()
-    if len(is_there) == 0:
-        delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate))
+    if delegate.question_id > 3:
+        if msg["data"] == "very happy":
+            rate = 5
+        elif msg["data"] == "happy":
+            rate = 4
+        elif msg["data"] == "poker":
+            rate = 3
+        elif msg["data"] == "angry":
+            rate = 2
+        elif msg["data"] == "very angry":
+            rate = 1
+        is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
+        print(is_there)
+        delegate.connection.commit()
+        if len(is_there) == 0:
+            delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate, delegate.question_id))
+        else:
+            delegate.query.execute(update_rates_query.format(rate, delegate.chat_id, delegate.question_id))
+        delegate.connection.commit()
+        delegate.sender.sendMessage(text="با تشکر! نظر شما ثبت شد", reply_markup=main_keyboard)
+        return State.MAIN
     else:
-        delegate.query.execute(update_rates_query.format(rate, delegate.chat_id))
-    delegate.connection.commit()
-    delegate.sender.sendMessage(text="با تشکر! نظر شما ثبت شد", reply_markup=main_keyboard)
-    return State.MAIN
+        if msg["data"] == "very happy":
+            rate = 5
+        elif msg["data"] == "happy":
+            rate = 4
+        elif msg["data"] == "poker":
+            rate = 3
+        elif msg["data"] == "angry":
+            rate = 2
+        elif msg["data"] == "very angry":
+            rate = 1
+        is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
+        print(is_there)
+        delegate.connection.commit()
+        if len(is_there) == 0:
+            delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate, delegate.question_id))
+        else:
+            delegate.query.execute(update_rates_query.format(rate, delegate.chat_id, delegate.question_id))
+        delegate.connection.commit()
+        delegate.sender.sendMessage(text=questions[delegate.question_id], reply_markup=polling_keyboard)
+        delegate.question_id += 1
+        return State.POLL
 
 
 def poll_result(delegate, msg):
     result = delegate.query.execute(fetch_poll_result).fetchall()
-    delegate.sender.sendMessage(text="نتیجه نظرسنجی تا این لحظه = {0}".format(result[0][0]))
+    count = delegate.query.execute(fetch_rates_num).fetchall()
+    print(result, count)
+    delegate.sender.sendMessage(text=poll_result_text.format(result[0][0], count[0][0], result[1][0], count
+                                                             [1][0], result[2][0], count[2][0], result[3][0], count[3][0]))
     return State.ADMIN_PANEL
 
 
@@ -182,3 +224,17 @@ def announcing(delegate, msg):
     for i in users:
         delegate.bott.sendMessage(chat_id=i[0], text=msg["text"])
     return State.ADMIN_PANEL
+
+
+def add_photo(delegate, msg):
+    delegate.sender.sendMessage(text="عکس مورد نظر را بفرستید!", reply_markup=only_return_keyboard)
+    return State.ADDING_PHOTO
+
+
+def adding_photo(delegate, msg):
+    delegate.query.execute(insert_photo_id.format(msg["photo"]["file_id"]))
+    delegate.connection.commit()
+    delegate.sender.sendMessage("عکس با موفقیت اضافه شد!", reply_markup=admin_panel_keyboard)
+    return State.ADMIN_PANEL
+
+
