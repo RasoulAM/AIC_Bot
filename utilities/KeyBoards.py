@@ -63,7 +63,8 @@ def _contact_us_keyboard():
 def _admin_panel_keyboard():
     btn_lst = [
         [
-            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2], admin_panel_buttons_texts[3]
+            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2],
+            admin_panel_buttons_texts[3]
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
@@ -82,7 +83,7 @@ def _day_selection_keyboard():
         [
             day_selection_buttons_texts[2]
         ]
-        
+
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)
 
@@ -106,6 +107,23 @@ def _polling_keyboard():
     return btn_lst
 
 
+def _platform_keyboard():
+    btn_lst = [
+        [
+            platform_buttons_texts[0], platform_buttons_texts[1], platform_buttons_texts[2]
+        ]
+        ,
+        [
+            platform_buttons_texts[3], platform_buttons_texts[4], platform_buttons_texts[5]
+        ]
+        ,
+        [
+            platform_buttons_texts[6], platform_buttons_texts[7], platform_buttons_texts[8]
+        ]
+    ]
+    return ReplyKeyboardMarkup(keyboard=btn_lst)
+
+
 main_keyboard = _main_keyboard()
 information_keyboard = _information_keyboard()
 location_keyboard = _location_default_keyboard()
@@ -114,3 +132,4 @@ admin_panel_keyboard = _admin_panel_keyboard()
 day_selection_keyboard = _day_selection_keyboard()
 admin_read_message_keyboard = _admin_read_message_keyboard()
 polling_keyboard = _polling_keyboard()
+platform_keyboard = _platform_keyboard()

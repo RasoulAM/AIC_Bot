@@ -44,6 +44,18 @@ day_selection_buttons_texts = [
     "بازگشت",
 ]
 
+platform_buttons_texts = [
+    'Android',
+    'Gnome',
+    'iOS',
+    'Mac',
+    'KDE',
+    'MS Windows',
+    'Unity',
+    'Windows 7',
+    'بازگشت',
+]
+
 
 admin_read_messages_buttons_texts = [
     "خواندم",

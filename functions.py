@@ -16,9 +16,13 @@ def information(delegate, msg):
     return State.INFORMATION
 
 
+def sharif_id_manual(delegate, msg):
+    delegate.sender.sendDocument(sharif_id_file[msg["text"]])
+
+
 def sharif_id(delegate, msg):
-    delegate.sender.sendMessage(text="coming soon...!")
-    return State.INFORMATION
+    delegate.sender.sendMessage(text="پلتفرم مورد نظر خود را انتخاب کنید", reply_markup=platform_keyboard)
+    return State.PLATFORM_SHARIF_ID
 
 
 def map_loader(delegate, msg):
@@ -65,7 +69,8 @@ def contact_us(delegate, msg):
 
 
 def send_message_to_admin(delegate, msg):
-    query_text = send_message_text.format(delegate.chat_id, msg["from"]["first_name"], msg["message_id"], msg["text"], 0, 0)
+    query_text = send_message_text.format(delegate.chat_id, msg["from"]["first_name"], msg["message_id"], msg["text"],
+                                          0, 0)
     print(query_text)
     delegate.query.execute(query_text)
 
@@ -81,7 +86,8 @@ def get_location(delegate, msg):
 
 def admin_panel(delegate, msg):
     if delegate.chat_id in admin_chat_id:
-        delegate.sender.sendMessage(text="Access Granted!\nWelcome to the admin panel", reply_markup=admin_panel_keyboard)
+        delegate.sender.sendMessage(text="Access Granted!\nWelcome to the admin panel",
+                                    reply_markup=admin_panel_keyboard)
         return State.ADMIN_PANEL
     else:
         delegate.sender.sendMessage(text="Unauthorized Access!")
@@ -95,9 +101,10 @@ def show_unanswered_messages(delegate, msg):
         delegate.sender.sendMessage(text="No unread messages!")
         return State.ADMIN_PANEL
     else:
-        delegate.sender.sendMessage('{0} says:\n{1}'.format(messages[0][1], messages[0][2]), reply_markup=admin_read_message_keyboard)
+        delegate.sender.sendMessage('{0} says:\n{1}'.format(messages[0][1], messages[0][2]),
+                                    reply_markup=admin_read_message_keyboard)
         delegate.answer_to = messages[0][0]
-        delegate.message_id_replied=messages[0][3]
+        delegate.message_id_replied = messages[0][3]
     answering_message = messages[0]
     return State.ANSWER_OR_PASS
 
@@ -108,7 +115,8 @@ def to_answer(delegate, msg):
 
 
 def answer_message(delegate, msg):
-    delegate.query.execute(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', delegate.message_id_replied, 0))
+    delegate.query.execute(
+        admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', delegate.message_id_replied, 0))
     delegate.connection.commit()
     delegate.query.execute(update_message_is_answered_status1.format(delegate.answer_to))
     delegate.connection.commit()
