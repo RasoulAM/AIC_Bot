@@ -105,7 +105,7 @@ transitions = {
     (State.INFORMATION, state_texts_mapping.get(State.LOCATION)): map_loader,
     (State.INFORMATION, state_texts_mapping.get(State.SHARIF_ID)): sharif_id,
     (State.INFORMATION, state_texts_mapping.get(State.SCHEDULE)): schedule,
-    (State.INFORMATION, action_texts_mapping.get(Action.RETURN)): information,
+    (State.INFORMATION, action_texts_mapping.get(Action.RETURN)): main_menu,
 
     (State.PLATFORM_SHARIF_ID, state_texts_mapping.get(State.PLATFORM_ANDROID)): sharif_id_manual,
     (State.PLATFORM_SHARIF_ID, state_texts_mapping.get(Action.RETURN)): information,
