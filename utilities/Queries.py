@@ -44,7 +44,7 @@ create_answer_table_query = '' \
 admin_insert_answer = '' \
                       """
                       insert into answers(chat_id, answer_text, replied_to_message_id, is_read)
-                      values ({0}, {1}, {2}, {3})
+                      values ({0}, '\{1}\', {2}, {3})
                       """
 
 update_message_is_answered_status1 = '' \

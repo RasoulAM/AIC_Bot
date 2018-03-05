@@ -60,17 +60,29 @@ import os
 #
 
 
+# con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
+# query = con.cursor()
+# query.execute('' \
+#                         """
+#                         create table answers(
+#                         chat_id int,
+#                         answer_text text,
+#                         replied_to_message_id int,
+#                         is_read int);
+#                         """)
+# con.commit()
+#
+
+
+# con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
+# query = con.cursor()
+# query.execute("""drop table states""")
+# con.commit()
 con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 query.execute('' \
                         """
-                        create table answers(
-                        chat_id int,
-                        answer_text text,
-                        replied_to_message_id int,
-                        is_read int);
+                        alter table answers add column );
                         """)
 con.commit()
-#
-
 

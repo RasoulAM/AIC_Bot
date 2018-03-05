@@ -116,7 +116,7 @@ def to_answer(delegate, msg):
 
 def answer_message(delegate, msg):
     delegate.query.execute(
-        admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', delegate.message_id_replied, 0))
+        admin_insert_answer.format(delegate.answer_to, msg['text'], 0, delegate.message_id_replied))
     delegate.connection.commit()
     delegate.query.execute(update_message_is_answered_status1.format(delegate.answer_to))
     delegate.connection.commit()
