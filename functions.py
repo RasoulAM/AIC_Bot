@@ -56,6 +56,8 @@ def photography_contest(delegate, msg):
 
 def inbox(delegate, msg):
     answers = delegate.query.execute(fetch_answers.format(delegate.chat_id)).fetchall()
+    print(fetch_answers.format(delegate.chat_id))
+    print(answers)
     for answer in answers:
         delegate.sender.sendMessage(text=answer[0], reply_to_message_id=answer[1])
     if len(answers) == 0:

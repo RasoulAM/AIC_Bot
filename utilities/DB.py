@@ -82,7 +82,7 @@ con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 query.execute('' \
                         """
-                        alter table answers add column );
+                        drop table answers
                         """)
 con.commit()
 

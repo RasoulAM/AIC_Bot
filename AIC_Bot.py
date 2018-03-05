@@ -21,7 +21,9 @@ class StateHandler(telepot.helper.ChatHandler):
         super(StateHandler, self).__init__(*args, **kwargs)
         self.connection = sqlite3.connect(db_path, check_same_thread=False)
         self.query = self.connection.cursor()
-        id_in_database = self.query.execute(fetch_user + str(self.chat_id)).fetchall()
+        id_in_database = self.query.execute(fetch_user.format(self.chat_id)).fetchall()
+        print(fetch_user.format(self.chat_id))
+        print(id_in_database)
         self.connection.commit()
         self.existed_before = False
         self.answer_to = None

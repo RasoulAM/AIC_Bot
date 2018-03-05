@@ -3,7 +3,7 @@ insert_state = "insert into states VALUES({0}, \'{1}\', {2})"
 
 fetch_user = '' \
                 """
-                select * from states WHERE chat_ids=
+                select * from states WHERE chat_ids={0}
                 """
 
 update_state =  '' \
@@ -43,8 +43,8 @@ create_answer_table_query = '' \
 
 admin_insert_answer = '' \
                       """
-                      insert into answers(chat_id, answer_text, replied_to_message_id, is_read)
-                      values ({0}, '\{1}\', {2}, {3})
+                      insert into answers(chat_id, answer_text, is_read, replied_to_message_id)
+                      values ({0}, \'{1}\', {2}, {3})
                       """
 
 update_message_is_answered_status1 = '' \
