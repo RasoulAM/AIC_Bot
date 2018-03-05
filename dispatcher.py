@@ -41,7 +41,14 @@ state_texts_mapping = {
     State.LOCATION_MOSQUE: "مسجد",
     State.LOCATION_THEATER: "آمفی تئاتر مرکزی",
 
-
+    State.PLATFORM_ANDROID: "Android",
+    State.PLATFORM_GNOME: "Gnome",
+    State.PLATFORM_IOS: "iOS",
+    State.PLATFORM_KDE: "KDE",
+    State.PLATFORM_MAC: "Mac",
+    State.PLATFORM_MSWINDOWS: "MS Windows",
+    State.PLATFORM_UNITY: "Unity",
+    State.PLATFORM_WINDOWS7: "Windows 7",
 
 }
 
@@ -107,8 +114,8 @@ transitions = {
     (State.INFORMATION, state_texts_mapping.get(State.SCHEDULE)): schedule,
     (State.INFORMATION, action_texts_mapping.get(Action.RETURN)): main_menu,
 
-    (State.PLATFORM_SHARIF_ID, state_texts_mapping.get(State.PLATFORM_ANDROID)): sharif_id_manual,
-    (State.PLATFORM_SHARIF_ID, state_texts_mapping.get(Action.RETURN)): information,
+    (State.PLATFORM_SHARIF_ID, None): sharif_id_manual,
+    (State.PLATFORM_SHARIF_ID, action_texts_mapping.get(Action.RETURN)): information,
 
 
     # Location transitions
