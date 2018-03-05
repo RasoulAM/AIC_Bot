@@ -32,12 +32,14 @@ class StateHandler(telepot.helper.ChatHandler):
             self.existed_before = True
         if not self.existed_before:
             self.state = State.MAIN
-            self.sender.sendMessage(text="First time user detected!!", reply_markup=main_keyboard)
+            self.sender.sendMessage(text="به بات رقابت هوش مصنوعی شریف خوش آمدید.", reply_markup=main_keyboard)
         else:
             self.state = State(id_in_database[0][2])
         print("Initialization of connection finished. State: " + str(self.state.value))
 
     def on_chat_message(self, msg):
+        with open("log.txt", "a") as f:
+            f.write(str(msg) + '\n')
         pprint(msg)
         self.first_name = msg["from"]["first_name"]
         # By writing "state", the state will be shown
@@ -50,6 +52,8 @@ class StateHandler(telepot.helper.ChatHandler):
         dispatcher.dispatch(self, msg)
 
     def on_callback_query(self, msg):
+        with open("log.txt", "a") as f:
+            f.write(str(msg) + '\n')
         pprint(msg)
         dispatcher.dispatch(self, msg)
 
