@@ -38,6 +38,8 @@ class StateHandler(telepot.helper.ChatHandler):
         print("Initialization of connection finished. State: " + str(self.state.value))
 
     def on_chat_message(self, msg):
+        with open("log.txt", "a") as f:
+            f.write(str(msg) + '\n')
         pprint(msg)
         self.first_name = msg["from"]["first_name"]
         # By writing "state", the state will be shown
@@ -50,6 +52,8 @@ class StateHandler(telepot.helper.ChatHandler):
         dispatcher.dispatch(self, msg)
 
     def on_callback_query(self, msg):
+        with open("log.txt", "a") as f:
+            f.write(str(msg) + '\n')
         pprint(msg)
         dispatcher.dispatch(self, msg)
 

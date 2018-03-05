@@ -1,6 +1,9 @@
 import sqlite3
 import os
+<<<<<<< HEAD
 #from utilities.Queries import *
+=======
+>>>>>>> 64bdd9c87a4694c42889335756ea8089d5d18f1f
 
 con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
