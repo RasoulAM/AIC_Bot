@@ -26,6 +26,7 @@ class StateHandler(telepot.helper.ChatHandler):
         self.existed_before = False
         self.answer_to = None
         self.first_name = None
+        self.message_id_replied = None
         self.bott = bot
         if id_in_database:
             self.state = State(id_in_database[0][2])
