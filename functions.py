@@ -50,8 +50,8 @@ def photography_contest(delegate, msg):
 
 def inbox(delegate, msg):
     answers = delegate.query.execute(fetch_answers.format(delegate.chat_id)).fetchall()
-    for i in answers:
-        delegate.sender.sendMessage(text=i[0])
+    for answer in answers:
+        delegate.sender.sendMessage(text=answer[0], reply_to_message_id=answer[1])
     if len(answers) == 0:
         delegate.sender.sendMessage(text="پیام جدیدی برای شما نیست !")
     delegate.query.execute(update_answer_is_read_status.format(delegate.chat_id))
@@ -97,7 +97,7 @@ def show_unanswered_messages(delegate, msg):
     else:
         delegate.sender.sendMessage('{0} says:\n{1}'.format(messages[0][1], messages[0][2]), reply_markup=admin_read_message_keyboard)
         delegate.answer_to = messages[0][0]
-        delegate.message_id_replied=msg["message_id"]
+        delegate.message_id_replied=messages[0][3]
     answering_message = messages[0]
     return State.ANSWER_OR_PASS
 
@@ -108,14 +108,15 @@ def to_answer(delegate, msg):
 
 
 def answer_message(delegate, msg):
-    delegate.query.execute(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', 0))
+    delegate.query.execute(admin_insert_answer.format(delegate.answer_to, '\'' + msg['text'] + '\'', delegate.message_id_replied, 0))
     delegate.connection.commit()
     delegate.query.execute(update_message_is_answered_status1.format(delegate.answer_to))
     delegate.connection.commit()
     delegate.query.execute(update_message_is_read_status.format(delegate.answer_to))
     delegate.connection.commit()
     print(delegate.answer_to)
-    delegate.bott.sendMessage(chat_id=delegate.answer_to, text="پاسخی برای شما ارسال شده", reply_to_message_id=delegate.message_id_replied)
+    print(delegate.message_id_replied)
+    delegate.bott.sendMessage(chat_id=delegate.answer_to, text="پاسخی برای شما ارسال شده")
     delegate.sender.sendMessage(text="Done!", reply_markup=admin_panel_keyboard)
     return State.ADMIN_PANEL
 

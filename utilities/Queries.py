@@ -30,7 +30,7 @@ send_message_text = '' \
 
 fetch_messages = '' \
                  """
-                 select chat_id, first_name, Message from Messages where is_read = 0
+                 select chat_id, first_name, Message, MessageID from Messages where is_read = 0
                  """
 
 create_answer_table_query = '' \
@@ -43,8 +43,8 @@ create_answer_table_query = '' \
 
 admin_insert_answer = '' \
                       """
-                      insert into answers(chat_id, answer_text, is_read)
-                      values ({0}, {1}, {2})
+                      insert into answers(chat_id, answer_text, replied_to_message_id, is_read)
+                      values ({0}, {1}, {2}, {3})
                       """
 
 update_message_is_answered_status1 = '' \
@@ -61,7 +61,7 @@ update_message_is_read_status = '' \
 
 fetch_answers = '' \
                 """
-                select answer_text from answers WHERE chat_id = {0} and is_read = 0
+                select answer_text, replied_to_message_id from answers WHERE chat_id = {0} and is_read = 0
                 """
 
 

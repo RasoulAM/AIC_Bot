@@ -36,6 +36,7 @@ if __name__ == '__main__':
                         create table answers(
                         chat_id int,
                         answer_text text,
+                        replied_to_message_id int,
                         is_read int);
                         """)
         connection.commit()

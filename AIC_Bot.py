@@ -10,8 +10,8 @@ from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
 
-# TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
-TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
+TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
+# TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
 
 chat_ids = telepot.helper.SafeDict()
 
@@ -39,8 +39,8 @@ class StateHandler(telepot.helper.ChatHandler):
         print("Initialization of connection finished. State: " + str(self.state.value))
 
     def on_chat_message(self, msg):
-        with open("log.txt", "a") as f:
-            f.write(str(msg) + '\n')
+        # with open("log.txt", "a") as f:
+        #     f.write(str(msg) + '\n')
         pprint(msg)
         self.first_name = msg["from"]["first_name"]
         # By writing "state", the state will be shown
@@ -53,8 +53,8 @@ class StateHandler(telepot.helper.ChatHandler):
         dispatcher.dispatch(self, msg)
 
     def on_callback_query(self, msg):
-        with open("log.txt", "a") as f:
-            f.write(str(msg) + '\n')
+        # with open("log.txt", "a") as f:
+        #     f.write(str(msg) + '\n')
         pprint(msg)
         dispatcher.dispatch(self, msg)
 
