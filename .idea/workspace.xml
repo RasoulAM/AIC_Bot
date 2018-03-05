@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="57e3c548-c6e4-45d3-b821-a18317e37ff0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/AIC_Bot.py" afterPath="$PROJECT_DIR$/AIC_Bot.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/Texts.py" afterPath="$PROJECT_DIR$/utilities/Texts.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="34" column="81" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
+            <state relative-caret-position="315">
+              <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -157,11 +157,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Texts.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Texts.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
+            <state relative-caret-position="471">
+              <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -215,9 +215,9 @@
         <option value="$PROJECT_DIR$/dispatcher.py" />
         <option value="$PROJECT_DIR$/functions.py" />
         <option value="$PROJECT_DIR$/utilities/DB.py" />
-        <option value="$PROJECT_DIR$/utilities/Texts.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/AIC_Bot.py" />
+        <option value="$PROJECT_DIR$/utilities/Texts.py" />
       </list>
     </option>
   </component>
@@ -655,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520237961629</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fixed message">
+      <created>1520238176939</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1520238176939</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -717,7 +724,8 @@
     <MESSAGE value="start logging" />
     <MESSAGE value="merged" />
     <MESSAGE value="add admins" />
-    <option name="LAST_COMMIT_MESSAGE" value="add admins" />
+    <MESSAGE value="fixed message" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed message" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1111,16 +1119,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/functions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1133,10 +1131,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="34" column="81" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
+        <state relative-caret-position="315">
+          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
