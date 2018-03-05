@@ -17,7 +17,9 @@ def information(delegate, msg):
 
 
 def sharif_id_manual(delegate, msg):
+    print("HEEEEEEE")
     delegate.sender.sendDocument(sharif_id_file[msg["text"]])
+    return False
 
 
 def sharif_id(delegate, msg):
