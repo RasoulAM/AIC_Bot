@@ -1,6 +1,5 @@
 import sqlite3
 import os
-from utilities.Queries import *
 
 con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
