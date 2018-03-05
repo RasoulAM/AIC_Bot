@@ -105,6 +105,7 @@ transitions = {
     (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
     (State.ANSWER_OR_PASS, state_texts_mapping.get(State.ANSWERING)): to_answer,
     (State.ANSWER_OR_PASS, state_texts_mapping.get(State.PASS)): pass_message,
+    (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
     (State.ANSWERING, None): answer_message,
     (State.ANSWERING, action_texts_mapping.get(Action.RETURN)): main_menu,
 

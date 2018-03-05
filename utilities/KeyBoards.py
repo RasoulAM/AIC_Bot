@@ -95,6 +95,14 @@ def _admin_read_message_keyboard():
     ]])
     return btn_lst
 
+def _only_return_keyboard():
+    btn_lst = [
+        [
+            "بازگشت"
+        ]
+    ]
+    return ReplyKeyboardMarkup(keyboard=btn_lst)
+
 
 def _polling_keyboard():
     btn_lst = InlineKeyboardMarkup(inline_keyboard=[[
@@ -131,5 +139,6 @@ contact_us_keyboard = _contact_us_keyboard()
 admin_panel_keyboard = _admin_panel_keyboard()
 day_selection_keyboard = _day_selection_keyboard()
 admin_read_message_keyboard = _admin_read_message_keyboard()
+only_return_keyboard = _only_return_keyboard()
 polling_keyboard = _polling_keyboard()
 platform_keyboard = _platform_keyboard()
