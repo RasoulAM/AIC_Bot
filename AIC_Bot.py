@@ -32,7 +32,7 @@ class StateHandler(telepot.helper.ChatHandler):
             self.existed_before = True
         if not self.existed_before:
             self.state = State.MAIN
-            self.sender.sendMessage(text="First time user detected!!", reply_markup=main_keyboard)
+            self.sender.sendMessage(text="به بات رقابت هوش مصنوعی شریف خوش آمدید.", reply_markup=main_keyboard)
         else:
             self.state = State(id_in_database[0][2])
         print("Initialization of connection finished. State: " + str(self.state.value))

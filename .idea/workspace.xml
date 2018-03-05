@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57e3c548-c6e4-45d3-b821-a18317e37ff0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/utilities/Texts.py" afterPath="$PROJECT_DIR$/utilities/Texts.py" />
+      <change beforePath="$PROJECT_DIR$/AIC_Bot.py" afterPath="$PROJECT_DIR$/AIC_Bot.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AIC_Bot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="66" column="72" lean-forward="true" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
+            <state relative-caret-position="84">
+              <caret line="34" column="81" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -50,7 +49,7 @@
       <file leaf-file-name="Locations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Locations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="492">
               <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
@@ -105,8 +104,8 @@
       <file leaf-file-name="functions.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1659">
-              <caret line="83" column="60" lean-forward="false" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
+            <state relative-caret-position="165">
+              <caret line="67" column="78" lean-forward="false" selection-start-line="67" selection-start-column="73" selection-end-line="67" selection-end-column="78" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -158,7 +157,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Texts.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Texts.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utilities/Texts.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="429">
@@ -196,6 +195,7 @@
       <find>conta</find>
       <find>a</find>
       <find>abra</find>
+      <find>first</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,10 +214,10 @@
         <option value="$PROJECT_DIR$/utilities/states.py" />
         <option value="$PROJECT_DIR$/dispatcher.py" />
         <option value="$PROJECT_DIR$/functions.py" />
-        <option value="$PROJECT_DIR$/AIC_Bot.py" />
         <option value="$PROJECT_DIR$/utilities/DB.py" />
         <option value="$PROJECT_DIR$/utilities/Texts.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/AIC_Bot.py" />
       </list>
     </option>
   </component>
@@ -648,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1520237412264</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add admins">
+      <created>1520237961629</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1520237961629</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -709,7 +716,8 @@
     <MESSAGE value="fixing DB.py Bug" />
     <MESSAGE value="start logging" />
     <MESSAGE value="merged" />
-    <option name="LAST_COMMIT_MESSAGE" value="merged" />
+    <MESSAGE value="add admins" />
+    <option name="LAST_COMMIT_MESSAGE" value="add admins" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1042,7 +1050,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utilities/Locations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="492">
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding />
         </state>
@@ -1062,26 +1070,6 @@
           <caret line="83" column="23" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1659">
-          <caret line="83" column="60" lean-forward="false" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="66" column="72" lean-forward="true" selection-start-line="66" selection-start-column="72" selection-end-line="66" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1129,6 +1117,26 @@
           <caret line="66" column="14" lean-forward="true" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="67" column="78" lean-forward="false" selection-start-line="67" selection-start-column="73" selection-end-line="67" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AIC_Bot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="34" column="81" lean-forward="false" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
