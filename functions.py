@@ -106,7 +106,7 @@ def show_unanswered_messages(delegate, msg):
         return State.ADMIN_PANEL
     else:
         delegate.sender.sendMessage('{0} says:\n{1}'.format(messages[0][1], messages[0][2]),
-                                    reply_markup=only_return_keyboard)
+                                    reply_markup=admin_read_message_keyboard)
         delegate.answer_to = messages[0][0]
         delegate.message_id_replied = messages[0][3]
     answering_message = messages[0]
