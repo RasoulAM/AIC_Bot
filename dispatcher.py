@@ -95,6 +95,7 @@ transitions = {
     (State.MAIN, state_texts_mapping.get(State.PHOTOGRAPHY_CONTEST)): photography_contest,
     (State.MAIN, state_texts_mapping.get(State.INBOX)): inbox,
     (State.MAIN, state_texts_mapping.get(State.CONTACT_US)): contact_us,
+    (State.MAIN, state_texts_mapping.get(State.ONLINE_RESULT)): online_results,
 
 
     # main transitions for admin
