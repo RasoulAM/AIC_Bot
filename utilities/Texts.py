@@ -82,6 +82,8 @@ admin_chat_id = [
     147130888, # milad alikhani
     448477838, # amirhossien pooya
     58590332, # ali bahjati
+    332973435, # hasan sendani
+    110366434, #sahar zargarzadeh
 ]
 
 
