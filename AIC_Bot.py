@@ -10,8 +10,8 @@ from dispatcher import *
 from utilities.Queries import *
 from utilities.Texts import db_path
 
-TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg"
-# TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc"
+# TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg" #alaki
+TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc" #ai
 
 chat_ids = telepot.helper.SafeDict()
 
