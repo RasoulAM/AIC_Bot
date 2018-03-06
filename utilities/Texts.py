@@ -36,6 +36,8 @@ admin_panel_buttons_texts = [
     "نتیجه نظر سنجی",
     "ارسال اطلاعیه",
     "اضافه کردن عکس",
+    "نتایج مسابقه عکس",
+    "حذف عکس از مسابقه",
     "بازگشت",
 ]
 
@@ -113,3 +115,10 @@ like_dislike_texts = [
     emojies.get("like"),
     emojies.get("dislike")
 ]
+
+
+result_text1 = """
+              نتایج مسابقه عکس تا این لحظه: 
+              """
+
+result_text2 = "likes: {0}\ndislikes: {1}"

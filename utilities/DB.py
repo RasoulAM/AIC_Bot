@@ -82,12 +82,7 @@ con = sqlite3.connect(os.getcwd() + '/database.db', check_same_thread=False)
 query = con.cursor()
 query.execute(''\
                     """
-                      create table photo_contest_result(
-                      photo_id text,
-                      like int,
-                      dislike int,
-                      chat_id int
-                      );
+                      delete from photo_contest_result where 1=1
                       """)
 con.commit()
 

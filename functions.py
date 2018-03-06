@@ -9,6 +9,8 @@ from utilities.Texts import *
 def main_menu(delegate, msg):
     # It won't work without the text!!
     delegate.sender.sendMessage(text="Main Menu!", reply_markup=main_keyboard)
+    delegate.photonum = 0
+    delegate.question_id = 0
     return State.MAIN
 
 
@@ -52,6 +54,7 @@ def show_schedule(delegate, msg):
 
 def photography_contest(delegate, msg):
     photos = delegate.query.execute(fetch_photo_nums).fetchall()
+    delegate.photonum = 0
     if len(photos) == 0:
         delegate.sender.sendMessage("به زودی...!")
         return State.MAIN
@@ -85,7 +88,6 @@ def photography_contesting(delegate, msg):
         return State.MAIN
     elif delegate.photonum < len(photos) - 1:
         if msg["data"] == "like":
-            print(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id))
             is_there = delegate.query.execute(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
             if len(is_there) == 0:
                 delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 1, 0, delegate.chat_id))
@@ -110,8 +112,6 @@ def photography_contesting(delegate, msg):
 
 def inbox(delegate, msg):
     answers = delegate.query.execute(fetch_answers.format(delegate.chat_id)).fetchall()
-    print(fetch_answers.format(delegate.chat_id))
-    print(answers)
     for answer in answers:
         delegate.sender.sendMessage(text=answer[0], reply_to_message_id=answer[1])
     if len(answers) == 0:
@@ -133,7 +133,6 @@ def online_results(delegate, msg):
 def send_message_to_admin(delegate, msg):
     query_text = send_message_text.format(delegate.chat_id, msg["from"]["first_name"], msg["message_id"], msg["text"],
                                           0, 0)
-    print(query_text)
     delegate.query.execute(query_text)
 
     delegate.connection.commit()
@@ -185,8 +184,6 @@ def answer_message(delegate, msg):
     delegate.connection.commit()
     delegate.query.execute(update_message_is_read_status.format(delegate.answer_to))
     delegate.connection.commit()
-    print(delegate.answer_to)
-    print(delegate.message_id_replied)
     delegate.bott.sendMessage(chat_id=delegate.answer_to, text="پاسخی برای شما ارسال شده")
     delegate.sender.sendMessage(text="Done!", reply_markup=admin_panel_keyboard)
     return State.ADMIN_PANEL
@@ -212,7 +209,6 @@ def polling(delegate, msg):
         elif msg["data"] == "very angry":
             rate = 1
         is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
-        print(is_there)
         delegate.connection.commit()
         if len(is_there) == 0:
             delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate, delegate.question_id))
@@ -233,7 +229,6 @@ def polling(delegate, msg):
         elif msg["data"] == "very angry":
             rate = 1
         is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
-        print(is_there)
         delegate.connection.commit()
         if len(is_there) == 0:
             delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate, delegate.question_id))
@@ -248,7 +243,6 @@ def polling(delegate, msg):
 def poll_result(delegate, msg):
     result = delegate.query.execute(fetch_poll_result).fetchall()
     count = delegate.query.execute(fetch_rates_num).fetchall()
-    print(result, count)
     delegate.sender.sendMessage(text=poll_result_text.format(result[0][0], count[0][0],
                                                              result[1][0], count[1][0],
                                                              result[2][0], count[2][0],
@@ -288,3 +282,28 @@ def adding_photo(delegate, msg):
     return State.ADMIN_PANEL
 
 
+def photography_contest_result(delegate, msg):
+    likes_result = delegate.query.execute(fetch_photography_contest_likes).fetchall()
+    dislikes_result = delegate.query.execute(fetch_photography_contest_dislikes).fetchall()
+    delegate.connection.commit()
+    for i in range(len(likes_result)):
+        text = result_text2.format(likes_result[i][1], dislikes_result[i][1])
+        delegate.sender.sendPhoto(caption=text, photo=likes_result[i][0])
+    return State.ADMIN_PANEL
+
+
+def delete_photo(delegate, msg):
+    delegate.sender.sendMessage(text="عکس مورد نظر را اینجا فوروارد کنید تا حذف شود:")
+    return State.DELETING_PHOTO
+
+
+def deleting_photo(delegate, msg):
+    try:
+        delegate.query.execute(delete_photo_query_from_result.format(msg["photo"][0]["file_id"]))
+        delegate.query.execute(delete_photo_query_from_photos.format(msg["photo"][0]["file_id"]))
+        delegate.connection.commit()
+        delegate.sender.sendMessage(text="عکس مورد نظر با موفقیت حذف شد!")
+    except:
+        delegate.sender.sendMessage(text="عکس مورد نظر وجود ندارد!")
+    finally:
+        return State.ADMIN_PANEL

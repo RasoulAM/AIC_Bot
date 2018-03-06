@@ -63,8 +63,10 @@ def _contact_us_keyboard():
 def _admin_panel_keyboard():
     btn_lst = [
         [
-            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2],
-            admin_panel_buttons_texts[3], admin_panel_buttons_texts[4],
+            admin_panel_buttons_texts[0], admin_panel_buttons_texts[1], admin_panel_buttons_texts[2], admin_panel_buttons_texts[3],
+        ],
+        [
+            admin_panel_buttons_texts[4], admin_panel_buttons_texts[5], admin_panel_buttons_texts[6],
         ]
     ]
     return ReplyKeyboardMarkup(keyboard=btn_lst)

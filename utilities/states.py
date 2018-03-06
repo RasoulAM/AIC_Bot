@@ -12,6 +12,9 @@ class State(Enum):
     ANNOUNCING = 8
     ADD_PHOTO = 9
     ADDING_PHOTO = 10
+    PHOTOGRAPHY_CONTEST_RESULT = 11
+    DELETE_PHOTO = 12
+    DELETING_PHOTO = 13
 
     # main menu
     INFORMATION = 101
