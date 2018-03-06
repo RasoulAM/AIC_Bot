@@ -14,6 +14,7 @@ state_texts_mapping = {
     State.ANSWERING: "answer",
     State.PASS: "pass",
     State.PHOTOGRAPHY_CONTEST_RESULT: "نتایج مسابقه عکس",
+    State.DELETE_PHOTO: "حذف عکس از مسابقه",
 
     State.LIKE: "like",
     State.DISLIKE: "dislike",
