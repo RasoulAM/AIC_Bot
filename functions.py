@@ -125,6 +125,10 @@ def contact_us(delegate, msg):
     delegate.sender.sendMessage(text="پیام خود را بنویسید و ارسال کنید", reply_markup=contact_us_keyboard)
     return State.CONTACT_US
 
+def online_results(delegate, msg):
+    delegate.sender.sendMessage(text="به زودی...")
+    return State.MAIN
+
 
 def send_message_to_admin(delegate, msg):
     query_text = send_message_text.format(delegate.chat_id, msg["from"]["first_name"], msg["message_id"], msg["text"],
@@ -193,7 +197,7 @@ def pass_message(delegate, msg):
 
 
 def polling(delegate, msg):
-    if delegate.question_id > 3:
+    if delegate.question_id > 7:
         if msg["data"] == "very happy":
             rate = 5
         elif msg["data"] == "happy":
@@ -239,8 +243,17 @@ def polling(delegate, msg):
 def poll_result(delegate, msg):
     result = delegate.query.execute(fetch_poll_result).fetchall()
     count = delegate.query.execute(fetch_rates_num).fetchall()
-    delegate.sender.sendMessage(text=poll_result_text.format(result[0][0], count[0][0], result[1][0], count
-                                                             [1][0], result[2][0], count[2][0], result[3][0], count[3][0]))
+    delegate.sender.sendMessage(text=poll_result_text.format(result[0][0], count[0][0],
+                                                             result[1][0], count[1][0],
+                                                             result[2][0], count[2][0],
+                                                             result[3][0], count[3][0],
+                                                             result[4][0], count[4][0],
+                                                             result[5][0], count[5][0],
+                                                             result[6][0], count[6][0],
+                                                             result[7][0], count[7][0],
+                                                             # result[8][0], count[8][0],
+                                                             # result[9][0], count[9][0],
+                                                             ))
     return State.ADMIN_PANEL
 
 

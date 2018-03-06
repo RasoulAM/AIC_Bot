@@ -1,7 +1,7 @@
 
 schedule_images = {
-    "روز اول": 'AgADBAADYqwxG3VC6FA-HK-DiDn97RbdihoABAqmK7-gaGbYKfICAAEC',
-    "روز دوم": 'AgADBAADY6wxG3VC6FB17515jvG_WxpDNBoABKxulKMM5jAmNsgAAgI',
+    "روز اول": 'AgADBAAD5asxG-N9-VClUxgGQ2ZVWG69JxoABKSkx0l_98HrEGwEAAEC',
+    "روز دوم": 'AgADBAAD5qsxG-N9-VAsPxf9jYsix0VnjxoABEQAAbFcJwfLztkAAQMAAQI',
 }
 
 sharif_id_file = {
