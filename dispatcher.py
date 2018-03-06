@@ -14,6 +14,8 @@ state_texts_mapping = {
     State.ANSWERING: "answer",
     State.PASS: "pass",
 
+    State.LIKE: "like",
+    State.DISLIKE: "dislike",
 
     State.POLL_very_happy: "very happy",
     State.POLL_happy: "happy",
@@ -75,6 +77,14 @@ def dispatch(delegate, msg):
             new_state = transitions.get((delegate.state, msg["text"]))(delegate, msg)
         if new_state:
             delegate.state = new_state
+    elif "photo" in msg.keys():
+        if transitions.get((delegate.state, None)) is None:
+            return
+        elif transitions.get((delegate.state, None)) is not None:
+            print(delegate.state)
+            new_state = transitions.get((delegate.state, None))(delegate, msg)
+            print(new_state)
+
 
 
 transitions = {
@@ -101,8 +111,12 @@ transitions = {
     (State.ANNOUNCEMENT, None): announcing,
     (State.ANNOUNCEMENT, action_texts_mapping.get(Action.RETURN)):admin_panel,
 
-    # admin ad photo
-    (State.ADD_PHOTO, None): adding_photo,
+    # admin add photo
+    (State.ADDING_PHOTO, None): adding_photo,
+    (State.ADDING_PHOTO, action_texts_mapping.get(Action.RETURN)): admin_panel,
+
+    # photography_contest
+    (State.PHOTOGRAPHY_CONTEST, action_texts_mapping.get(Action.RETURN)): main_menu,
 
     # (State.ANSWER_MESSAGES, ""): show_unanswered_messages,
     (State.ANSWER_OR_PASS, action_texts_mapping.get(Action.RETURN)): admin_panel,
@@ -144,5 +158,10 @@ transitions = {
     (State.POLL, state_texts_mapping.get(State.POLL_angry)): polling,
     (State.POLL, state_texts_mapping.get(State.POLL_very_angry)): polling,
     (State.POLL, action_texts_mapping.get(Action.RETURN)): main_menu,
+
+    # photography contest
+    (State.PHOTOGRAPHY_CONTEST, state_texts_mapping.get(State.LIKE)):photography_contesting,
+    (State.PHOTOGRAPHY_CONTEST, state_texts_mapping.get(State.DISLIKE)):photography_contesting,
+
 
 }

@@ -54,21 +54,59 @@ def show_schedule(delegate, msg):
 def photography_contest(delegate, msg):
     photos = delegate.query.execute(fetch_photo_nums).fetchall()
     if len(photos) == 0:
-        delegate.sender.sendMessage("عکسی موجود نیست")
+        delegate.sender.sendMessage("به زودی...!")
         return State.MAIN
     else:
-        delegate.sender.sendPhoto(photo=photos[delegate.photo_id], reply_markup=like_dislike_keyboard)
+        delegate.sender.sendMessage(text="مسابقه عکس:", reply_markup=only_return_keyboard)
+        delegate.sender.sendPhoto(photo=photos[delegate.photonum][0], reply_markup=like_dislike_keyboard)
     return State.PHOTOGRAPHY_CONTEST
 
 
 def photography_contesting(delegate, msg):
     photos = delegate.query.execute(fetch_photo_nums).fetchall()
-    if len(photos) == 0:
-        delegate.sender.sendMessage("عکسی موجود نیست")
+    if delegate.photonum >= len(photos) - 1:
+        if msg["data"] == "like":
+            is_there = delegate.query.execute(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
+            if len(is_there) == 0:
+                delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 1, 0, delegate.chat_id))
+            else:
+                delegate.query.execute(update_photo_like1.format(1, photos[delegate.photonum][0], delegate.chat_id))
+                delegate.query.execute(update_photo_like2.format(0, photos[delegate.photonum][0], delegate.chat_id))
+        elif msg["data"] == "dislike":
+            is_there = delegate.query.execute(
+                check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
+            if len(is_there) == 0:
+                delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 0, 1, delegate.chat_id))
+            else:
+                delegate.query.execute(update_photo_like1.format(0, photos[delegate.photonum][0], delegate.chat_id))
+                delegate.query.execute(update_photo_like2.format(1, photos[delegate.photonum][0], delegate.chat_id))
+        delegate.connection.commit()
+        delegate.photonum += 1
+        delegate.sender.sendMessage(text="با تشکر نظر شما ثبت شد.", reply_markup=main_keyboard)
         return State.MAIN
-    elif delegate.photonum < len(photos):
-        delegate.sender.sendPhoto(photo=photos[delegate.photo_id], reply_markup=like_dislike_keyboard)
-    return State.PHOTOGRAPHY_CONTEST
+    elif delegate.photonum < len(photos) - 1:
+        if msg["data"] == "like":
+            print(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id))
+            is_there = delegate.query.execute(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
+            if len(is_there) == 0:
+                delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 1, 0, delegate.chat_id))
+            else:
+                delegate.query.execute(update_photo_like1.format(1, photos[delegate.photonum][0], delegate.chat_id))
+                delegate.query.execute(update_photo_like2.format(0, photos[delegate.photonum][0], delegate.chat_id))
+        elif msg["data"] == "dislike":
+            is_there = delegate.query.execute(
+                check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
+            if len(is_there) == 0:
+                delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 0, 1, delegate.chat_id))
+            else:
+                delegate.query.execute(update_photo_like1.format(0, photos[delegate.photonum][0], delegate.chat_id))
+                delegate.query.execute(update_photo_like2.format(1, photos[delegate.photonum][0], delegate.chat_id))
+        delegate.connection.commit()
+        delegate.photonum += 1
+        # delegate.helper.
+        delegate.sender.sendMessage(text="عکس {0}:".format(delegate.photonum + 1), reply_markup=only_return_keyboard)
+        delegate.sender.sendPhoto(photo=photos[delegate.photonum][0], reply_markup=like_dislike_keyboard)
+        return State.PHOTOGRAPHY_CONTEST
 
 
 def inbox(delegate, msg):
@@ -232,7 +270,7 @@ def add_photo(delegate, msg):
 
 
 def adding_photo(delegate, msg):
-    delegate.query.execute(insert_photo_id.format(msg["photo"]["file_id"]))
+    delegate.query.execute(insert_photo_id.format(msg["photo"][0]["file_id"]))
     delegate.connection.commit()
     delegate.sender.sendMessage("عکس با موفقیت اضافه شد!", reply_markup=admin_panel_keyboard)
     return State.ADMIN_PANEL

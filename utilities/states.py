@@ -55,6 +55,11 @@ class State(Enum):
     POLL_angry = 134
     POLL_very_angry = 135
 
+    # contest
+    LIKE = 161
+    DISLIKE = 162
+
+
 
 
 

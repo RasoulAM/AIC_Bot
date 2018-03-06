@@ -84,8 +84,9 @@ query.execute(''\
                     """
                       create table photo_contest_result(
                       photo_id text,
-                      likes_num int,
-                      dislikes_num int
+                      like int,
+                      dislike int,
+                      chat_id int
                       );
                       """)
 con.commit()

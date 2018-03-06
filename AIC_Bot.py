@@ -31,6 +31,7 @@ class StateHandler(telepot.helper.ChatHandler):
         self.first_name = None
         self.message_id_replied = None
         self.bott = bot
+        self.photonum = 0
         if id_in_database:
             self.state = State(id_in_database[0][2])
             self.existed_before = True
@@ -42,35 +43,36 @@ class StateHandler(telepot.helper.ChatHandler):
         print("Initialization of connection finished. State: " + str(self.state.value))
 
     def on_chat_message(self, msg):
-        try:
+        # try:
             with open("log.txt", "a", encoding="utf-8") as f:
                 f.write(str(msg) + '\n')
             pprint(msg)
             self.first_name = msg["from"]["first_name"]
             # By writing "state", the state will be shown
-            if msg["text"] is None:
-                return
-            if msg["text"] == "state":
-                self.sender.sendMessage(text=str(self.state))
-                return
+            # if msg["text"] is None:
+            #     return
+            if "text" in msg.keys():
+                if msg["text"] == "state":
+                    self.sender.sendMessage(text=str(self.state))
+                    return
 
             dispatcher.dispatch(self, msg)
-        except Exception:
-            with open("errlog.txt","a") as f:
-                f.write(Exception.__str__() + '\n')
+        # except Exception:
+        #     with open("errlog.txt","a") as f:
+        #         f.write(Exception.__str__() + '\n')
 
     def on_callback_query(self, msg):
-        try:
+        # try:
             with open("log.txt", "a", encoding="utf-8") as f:
                 f.write(str(msg) + '\n')
             pprint(msg)
             dispatcher.dispatch(self, msg)
-        except Exception:
-            with open("errlog.txt","a") as f:
-                f.write(Exception.__str__() + '\n')
+        # except Exception:
+        #     with open("errlog.txt","a") as f:
+        #         f.write(Exception.__str__() + '\n')
 
     def on_close(self, msg):
-        try:
+        # try:
             if self.existed_before:
                 query = update_state.format(self.state.value, self.chat_id)
             else:
@@ -78,9 +80,9 @@ class StateHandler(telepot.helper.ChatHandler):
             self.query.execute(query)
             self.connection.commit()
             print("Timed out connection at state: " + str(self.state.value))
-        except Exception:
-            with open("errlog.txt","a", encoding="urf-8") as f:
-                f.write(Exception.__str__() + '\n')
+        # except Exception:
+        #     with open("errlog.txt","a", encoding="urf-8") as f:
+        #         f.write(Exception.__str__() + '\n')
 
 
 if __name__ == '__main__':

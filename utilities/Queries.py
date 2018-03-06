@@ -127,8 +127,34 @@ fetch_photo_nums = '' \
                    select * from photo_ids
                    """
 
-check_update_or_insert_rate_query = '' \
+
+insert_photo_like = '' \
+                    """
+                    insert into photo_contest_result
+                    VALUES (\'{0}\', {1}, {2}, {3})
+                    """
+
+update_photo_like1 = '' \
+                    """
+                    update photo_contest_result
+                    set like = {0}
+                    where photo_id = \'{1}\'
+                    and chat_id = {2}
+                    """
+
+update_photo_like2 = '' \
+                    """
+                    update photo_contest_result
+                    set like = {0}
+                    where photo_id = \'{1}\'
+                    and chat_id = {2}
+                    """
+
+
+
+
+check_update_or_insert_photo_rate = '' \
                                     """
-                                    select photo_id from photo_ids
-                                    where chat_id = {0} and question_id = {1}
+                                    select * from photo_contest_result
+                                    where photo_id = \'{0}\' and chat_id = {1}
                                     """
