@@ -13,6 +13,7 @@ state_texts_mapping = {
     State.ADD_PHOTO: "اضافه کردن عکس",
     State.ANSWERING: "answer",
     State.PASS: "pass",
+    State.PHOTOGRAPHY_CONTEST_RESULT: "نتایج مسابقه عکس",
 
     State.LIKE: "like",
     State.DISLIKE: "dislike",
@@ -61,7 +62,6 @@ action_texts_mapping = {
 
 def dispatch(delegate, msg):
     if "data" in msg.keys():
-        print(msg["data"])
         new_state = transitions.get((delegate.state, msg["data"]))(delegate, msg)
         if new_state:
             delegate.state = new_state
@@ -69,9 +69,8 @@ def dispatch(delegate, msg):
         if transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is None:
             return
         elif transitions.get((delegate.state, msg["text"])) is None and transitions.get((delegate.state, None)) is not None:
-            print(delegate.state)
             new_state = transitions.get((delegate.state, None))(delegate, msg)
-            print(new_state)
+            delegate.state = new_state
 
         else:
             new_state = transitions.get((delegate.state, msg["text"]))(delegate, msg)
@@ -81,10 +80,8 @@ def dispatch(delegate, msg):
         if transitions.get((delegate.state, None)) is None:
             return
         elif transitions.get((delegate.state, None)) is not None:
-            print(delegate.state)
             new_state = transitions.get((delegate.state, None))(delegate, msg)
-            print(new_state)
-
+            delegate.state = new_state
 
 
 transitions = {
@@ -105,7 +102,9 @@ transitions = {
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ANSWER_OR_PASS)): show_unanswered_messages,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.POLL_RESULT)): poll_result,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ANNOUNCEMENT)): announcement,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.PHOTOGRAPHY_CONTEST_RESULT)): photography_contest_result,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ADD_PHOTO)): add_photo,
+    (State.ADMIN_PANEL, state_texts_mapping.get(State.DELETE_PHOTO)): delete_photo,
 
     # admin announcement
     (State.ANNOUNCEMENT, None): announcing,
@@ -114,6 +113,10 @@ transitions = {
     # admin add photo
     (State.ADDING_PHOTO, None): adding_photo,
     (State.ADDING_PHOTO, action_texts_mapping.get(Action.RETURN)): admin_panel,
+
+    # admin delete photo
+    (State.DELETING_PHOTO, None): deleting_photo,
+    (State.DELETING_PHOTO, action_texts_mapping.get(Action.RETURN)): admin_panel,
 
     # photography_contest
     (State.PHOTOGRAPHY_CONTEST, action_texts_mapping.get(Action.RETURN)): main_menu,

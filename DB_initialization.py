@@ -58,8 +58,8 @@ if __name__ == '__main__':
                       """
                       create table photo_contest_result(
                       photo_id text,
-                      likes_num int,
-                      dislikes_num int,
+                      likes int,
+                      dislikes int,
                       chat_id int
                       );
                       """)
