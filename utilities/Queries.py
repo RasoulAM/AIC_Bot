@@ -137,7 +137,7 @@ insert_photo_like = '' \
 update_photo_like1 = '' \
                     """
                     update photo_contest_result
-                    set like = {0}
+                    set likes = {0}
                     where photo_id = \'{1}\'
                     and chat_id = {2}
                     """
@@ -145,7 +145,7 @@ update_photo_like1 = '' \
 update_photo_like2 = '' \
                     """
                     update photo_contest_result
-                    set dislike = {0}
+                    set dislikes = {0}
                     where photo_id = \'{1}\'
                     and chat_id = {2}
                     """
@@ -160,13 +160,13 @@ check_update_or_insert_photo_rate = '' \
 
 fetch_photography_contest_likes = '' \
                     """
-                    select photo_id, sum(like) from photo_contest_result
+                    select photo_id, sum(likes) from photo_contest_result
                     group BY photo_id
                     """
 
 fetch_photography_contest_dislikes = '' \
                     """
-                    select photo_id, sum(dislike) from photo_contest_result
+                    select photo_id, sum(dislikes) from photo_contest_result
                     group BY photo_id
                     """
 
