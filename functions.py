@@ -266,7 +266,11 @@ def announcing(delegate, msg):
     users = delegate.query.execute(fetch_users).fetchall()
     delegate.connection.commit()
     for i in users:
-        delegate.bott.sendMessage(chat_id=i[0], text=msg["text"])
+        try:
+            delegate.bott.sendMessage(chat_id=i[0], text=msg["text"])
+        except Exception:
+            print(Exception)
+
     return State.ADMIN_PANEL
 
 
