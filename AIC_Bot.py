@@ -89,7 +89,7 @@ if __name__ == '__main__':
     bot = telepot.DelegatorBot(TOKEN, [
         include_callback_query_chat_id(
             pave_event_space())(
-            per_chat_id(), create_open, StateHandler, timeout=400),
+            per_chat_id(), create_open, StateHandler, timeout=120),
     ])
 
     MessageLoop(bot).run_forever()
