@@ -21,6 +21,7 @@ def information(delegate, msg):
 
 def sharif_id_manual(delegate, msg):
     delegate.sender.sendDocument(sharif_id_file[msg["text"]])
+    return State.PLATFORM_SHARIF_ID
 
 
 def sharif_id(delegate, msg):
@@ -141,6 +142,7 @@ def send_message_to_admin(delegate, msg):
 
 def get_location(delegate, msg):
     delegate.sender.sendLocation(latitude=locations.get(msg["text"])[0], longitude=locations.get(msg["text"])[1])
+    return State.LOCATION
 
 
 def admin_panel(delegate, msg):
