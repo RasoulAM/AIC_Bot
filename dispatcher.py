@@ -87,6 +87,8 @@ def dispatch(delegate, msg):
 
 transitions = {
 
+    (False, None): main_menu,
+
     # main transitions
     (State.MAIN, state_texts_mapping.get(State.INFORMATION)): information,
     (State.MAIN, state_texts_mapping.get(State.POLL)): poll,
