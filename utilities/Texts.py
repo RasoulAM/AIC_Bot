@@ -75,9 +75,9 @@ polling_button_texts = [
 ]
 
 admin_chat_id = [
-    25097866, # javad aboot
     105566991, # sajjad vahedi
     123375596, # rasoul akhavan
+    25097866, # javad aboot
     183782606, # kianoosh abbasi
     147130888, # milad alikhani
     448477838, # amirhossien pooya

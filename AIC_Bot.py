@@ -8,7 +8,7 @@ from telepot.loop import MessageLoop
 import dispatcher
 from dispatcher import *
 from utilities.Queries import *
-from utilities.Texts import db_path
+from utilities.Texts import *
 
 # TOKEN = "547363442:AAE0A14extwZ4f2Nkt14SdOvfkvSeWR2Wfg" #alaki
 TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc" #ai
@@ -32,6 +32,7 @@ class StateHandler(telepot.helper.ChatHandler):
         self.message_id_replied = None
         self.bott = bot
         self.photonum = 0
+        self.notification_activated = [False, False, False, False, False, False, False, False, False, False]
         if id_in_database:
             self.state = State(id_in_database[0][2])
             self.existed_before = True

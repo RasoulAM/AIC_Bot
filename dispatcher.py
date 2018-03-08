@@ -133,6 +133,7 @@ transitions = {
     (State.ADMIN_PANEL, state_texts_mapping.get(State.PHOTOGRAPHY_CONTEST_RESULT)): photography_contest_result,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.ADD_PHOTO)): add_photo,
     (State.ADMIN_PANEL, state_texts_mapping.get(State.DELETE_PHOTO)): delete_photo,
+    (State.ADMIN_PANEL, "activate"): notification_toggle,
 
     # admin announcement
     (State.ANNOUNCEMENT, None): announcing,

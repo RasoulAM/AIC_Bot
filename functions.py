@@ -68,7 +68,8 @@ def photography_contesting(delegate, msg):
     photos = delegate.query.execute(fetch_photo_nums).fetchall()
     if delegate.photonum >= len(photos) - 1:
         if msg["data"] == "like":
-            is_there = delegate.query.execute(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
+            is_there = delegate.query.execute(
+                check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
             if len(is_there) == 0:
                 delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 1, 0, delegate.chat_id))
             else:
@@ -88,7 +89,8 @@ def photography_contesting(delegate, msg):
         return State.MAIN
     elif delegate.photonum < len(photos) - 1:
         if msg["data"] == "like":
-            is_there = delegate.query.execute(check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
+            is_there = delegate.query.execute(
+                check_update_or_insert_photo_rate.format(photos[delegate.photonum][0], delegate.chat_id)).fetchall()
             if len(is_there) == 0:
                 delegate.query.execute(insert_photo_like.format(photos[delegate.photonum][0], 1, 0, delegate.chat_id))
             else:
@@ -125,6 +127,7 @@ def contact_us(delegate, msg):
     delegate.sender.sendMessage(text="پیام خود را بنویسید و ارسال کنید", reply_markup=contact_us_keyboard)
     return State.CONTACT_US
 
+
 def online_results(delegate, msg):
     delegate.sender.sendMessage(text="به زودی...")
     return State.MAIN
@@ -137,7 +140,27 @@ def send_message_to_admin(delegate, msg):
 
     delegate.connection.commit()
     delegate.sender.sendMessage(text="پیام شما ارسال شد!", reply_markup=main_keyboard)
+
+    for i in range(len(admin_chat_id)):
+        print(i, len(admin_chat_id))
+        if delegate.notification_activated[i]:
+            delegate.bott.sendMessage(chat_id=admin_chat_id[i], text="پیام جدید آمده!")
+
     return State.MAIN
+
+
+def notification_toggle(delegate, msg):
+    if "chat" not in msg or "id" not in msg["chat"]:
+        return State.ADMIN_PANEL
+    if msg["chat"]["id"] not in admin_chat_id:
+        return State.ADMIN_PANEL
+    index = 0
+    for i in range(len(admin_chat_id)):
+        if admin_chat_id[i] == msg["chat"]["id"]:
+            index = i
+            break
+    delegate.notification_activated[index] = not delegate.notification_activated[index]
+    return State.ADMIN_PANEL
 
 
 def get_location(delegate, msg):
@@ -208,7 +231,8 @@ def polling(delegate, msg):
             rate = 2
         elif msg["data"] == "very angry":
             rate = 1
-        is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
+        is_there = delegate.query.execute(
+            check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
         delegate.connection.commit()
         if len(is_there) == 0:
             delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate, delegate.question_id))
@@ -228,7 +252,8 @@ def polling(delegate, msg):
             rate = 2
         elif msg["data"] == "very angry":
             rate = 1
-        is_there = delegate.query.execute(check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
+        is_there = delegate.query.execute(
+            check_update_or_insert_rate_query.format(delegate.chat_id, delegate.question_id)).fetchall()
         delegate.connection.commit()
         if len(is_there) == 0:
             delegate.query.execute(insert_into_rates_query.format(delegate.chat_id, rate, delegate.question_id))
