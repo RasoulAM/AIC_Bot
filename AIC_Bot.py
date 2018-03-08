@@ -14,6 +14,7 @@ from utilities.Texts import *
 TOKEN = "514497589:AAFC24mg4F2nfv4C_2cvmtgR55chvaahcXc" #ai
 
 chat_ids = telepot.helper.SafeDict()
+notification_activate = telepot.helper.SafeDict()
 
 
 class StateHandler(telepot.helper.ChatHandler):
@@ -32,7 +33,8 @@ class StateHandler(telepot.helper.ChatHandler):
         self.message_id_replied = None
         self.bott = bot
         self.photonum = 0
-        self.notification_activated = [False, False, False, False, False, False, False, False, False, False]
+        self.notification_activated = notification_activate
+
         if id_in_database:
             self.state = State(id_in_database[0][2])
             self.existed_before = True
@@ -87,6 +89,9 @@ class StateHandler(telepot.helper.ChatHandler):
 
 
 if __name__ == '__main__':
+    print(len(admin_chat_id))
+    for chat_id in admin_chat_id:
+        notification_activate[chat_id] = False
     bot = telepot.DelegatorBot(TOKEN, [
         include_callback_query_chat_id(
             pave_event_space())(

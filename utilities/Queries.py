@@ -50,7 +50,7 @@ admin_insert_answer = '' \
 update_message_is_answered_status1 = '' \
                         """
                         update Messages set is_answered = 1
-                        WHERE chat_id = {0}
+                        WHERE chat_id = {0} and text=\'{1}\'
                         """
 
 update_message_is_read_status = '' \

@@ -141,25 +141,26 @@ def send_message_to_admin(delegate, msg):
     delegate.connection.commit()
     delegate.sender.sendMessage(text="پیام شما ارسال شد!", reply_markup=main_keyboard)
 
-    for i in range(len(admin_chat_id)):
-        print(i, len(admin_chat_id))
-        if delegate.notification_activated[i]:
-            delegate.bott.sendMessage(chat_id=admin_chat_id[i], text="پیام جدید آمده!")
+    for chat_id in admin_chat_id:
+        # print(i, len(admin_chat_id))
+        if delegate.notification_activated[chat_id]:
+            delegate.bott.sendMessage(chat_id=chat_id, text="پیام جدید آمده!")
 
     return State.MAIN
 
 
 def notification_toggle(delegate, msg):
     if "chat" not in msg or "id" not in msg["chat"]:
+        print("Not a chat")
         return State.ADMIN_PANEL
     if msg["chat"]["id"] not in admin_chat_id:
+        print("Not admin")
         return State.ADMIN_PANEL
-    index = 0
-    for i in range(len(admin_chat_id)):
-        if admin_chat_id[i] == msg["chat"]["id"]:
-            index = i
-            break
-    delegate.notification_activated[index] = not delegate.notification_activated[index]
+    delegate.notification_activated[msg["chat"]["id"]] = not delegate.notification_activated[msg["chat"]["id"]]
+    t = "Notification deactivated"
+    if delegate.notification_activated[msg["chat"]["id"]]:
+        t = "Notification activated"
+    delegate.bott.sendMessage(chat_id=msg["chat"]["id"], text=t)
     return State.ADMIN_PANEL
 
 
